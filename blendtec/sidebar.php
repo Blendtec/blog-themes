@@ -1,6 +1,6 @@
 <div id="sidebar">
  <div id="sidebar-banner"> 	
-   <a href="#modalRecipesNewsletter" arrow="1" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Image Button', 'Sign Up Newsletter', 'Sidebar Top']);"><img src="http://www.blendtec.com/blog/wp-content/uploads/2013/07/recipe_side-1.png" alt="" /></a>
+   <a href="#modalRecipesNewsletter" arrow="1" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Image Button', 'Sign Up Newsletter', 'Sidebar Top']);"><img src="<?php bloginfo('template_directory'); ?>/images/recipe_side-1.png" alt="" /></a>
  </div>
 
 
