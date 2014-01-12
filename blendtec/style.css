@@ -88,8 +88,7 @@ overflow: hidden
 }
 
 .navbar-main {
-    height: 110px;
-    max-width: 940px;
+    margin-bottom: 10px;
 }
 
 #wave {
