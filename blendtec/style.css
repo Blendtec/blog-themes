@@ -79,12 +79,17 @@ overflow: hidden
 
 #graybg {
 
-  height: 440px;
+  height: 460px;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
   background-color: #E9E8E6;
+}
+
+.navbar-main {
+    height: 110px;
+    max-width: 940px;
 }
 
 #wave {
