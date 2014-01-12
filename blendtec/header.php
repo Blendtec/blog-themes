@@ -128,7 +128,7 @@ if( isset($_POST['data']) )
 	</div>
 </div>	
 
-<a href="<?php echo get_bloginfo('url'); ?>"><img src="http://www.blendtec.com/blog/wp-content/uploads/2013/07/Blendtec_BlogBanner_SQ.jpg" alt="Blendtec banner" /></a></div>
+<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.jpg" alt="Blendtec banner" /></a></div>
 <div id="wave"></div>
 <div id="wrapper">
 <?php if ( is_admin_bar_showing() ) { ?>
