@@ -18,8 +18,8 @@ if( isset($_POST['data']) )
 <html lang="en">
 <head>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-<link href='http://www.blendtec.com/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-<link href='http://www.blendtec.com/css/blendtec.bootstrap.css' rel='stylesheet' type='text/css'>
+<link href='http://d3kqanmjpc18pw.cloudfront.net/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='<?php bloginfo('template_directory'); ?>/css/blendtec.css' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favico.png" />
 
 <?php if(is_single()) { ?>
