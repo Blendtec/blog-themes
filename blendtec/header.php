@@ -128,6 +128,6 @@ if( isset($_POST['data']) )
 	</div>
 </div>	
 
-<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.jpg" alt="Blendtec banner" /></a></div>
+<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.png" alt="Blendtec banner" /></a></div>
 <div id="wrapper">
 
