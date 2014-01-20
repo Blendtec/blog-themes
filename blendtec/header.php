@@ -77,55 +77,7 @@ if( isset($_POST['data']) )
 <div id="graybg"></div>
 <div id="header">
 <div class="container">
-	<div class="navbar navbar-main">
-		<div class="navbar-inner">
-
-			<a class="brand" href="<?php echo blendtec_url(); ?>">
-				<span>Blendtec</span>
-			</a>
-
-				<div class="row-fluid">
-					<div class="span12">
-
-						<ul class="nav nav-small pull-right">
-<li>
-								<a href="<?php echo blendtec_url(); ?>/commercial/">Commercial</a>							</li>
-							<li>
-<li>
-								<a href="<?php echo blendtec_url(); ?>/find_a_store">Find a Store</a>							</li>
-							<li>
-														<li>
-								<a href="<?php echo blendtec_url(); ?>/checkout">My Cart</a>							</li>
-							<li>
-								<a href="<?php echo blendtec_url(); ?>/auth/facebook">Login</a>							</li>
-							<li class="last">
-								<a href="<?php echo blendtec_url(); ?>/Contacts">1.800.BLENDTEC</a>							</li>
-						</ul>
-
-					</div>
-				</div>
-
-				<div class="row-fluid">
-					<div class="span12">
-						<ul class="nav pull-right top-menu">
-							<li>
-								<a href="<?php echo blendtec_url(); ?>/products/category/blenders">Blenders</a>							</li>
-							<li>
-								<a href="<?php echo blendtec_url(); ?>/products/category/jars" target="_blank">Jars</a>							</li>
-							<li>
-								<a href="<?php echo blendtec_url(); ?>/products/category/mills_and_mixers">Mixers & Mills</a>							</li>
-							<li>
-								<a href="<?php echo blendtec_url(); ?>/products/category/accessories">Accessories</a>							</li>
-							<li>
-								<a href="<?php echo blendtec_url(); ?>/blog">Blog</a>							</li>
-							<li class="last">
-								<a href="<?php echo blendtec_url(); ?>/recipes">Recipes</a>							</li>
-						</ul>
-					</div>
-				</div>
-
-		</div>
-	</div>
+	<?php get_template_part('partials/navigation'); ?>
 </div>	
 
 <a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.png" alt="Blendtec banner" /></a></div>
