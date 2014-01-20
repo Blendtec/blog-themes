@@ -1,0 +1,585 @@
+@import 'modules/globals';
+
+@import 'modules/blog-styles';
+
+/*******************************************************************************
+ Responsive redesign stuff
+*******************************************************************************/
+body > .container-fluid, .row-fluid.top-level {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.row-fluid {
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@media (max-width: 767px) {
+	body {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.row-fluid.top-level > .span12 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/*******************************************************************************
+ Top Navigation
+*******************************************************************************/
+
+/* THE SUBMENU LIST HIDDEN BY DEFAULT */
+
+ul#navlist ul a {
+  color: #000000;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#navcontainer {
+  float: right;
+  ul {
+    margin: -5px 63px 0 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+  }
+}
+
+.navlink a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 6.5px 0px;
+  font-size: 14px;
+  position: relative;
+}
+
+.menutab {
+  display: inline-block;
+  width: 1px;
+  height: 32px;
+  background-color: #ffffff;
+  position: relative;
+  top: 12px;
+}
+
+#navcontainer ul li {
+  a:hover {
+    color: #eb002b;
+    background-color: #ffffff;
+  }
+  span {
+    margin-left: -1px;
+    display: block;
+    padding: 0px 10px 6px 12px;
+  }
+}
+
+.navbar-container {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  background-color: #eb002b;
+  height: 45px;
+}
+
+.navbar-main {
+  a.brand {
+    span {
+      display: none;
+    }
+    display: block;
+    width: 130px;
+    height: 39px;
+    background: url('../images/blendtec-logo.png') no-repeat;
+    padding: 0px;
+    margin: 8px 0px 0px 74px;
+    z-index: 1000;
+  }
+  max-width: 1170px;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  .navbar-inner {
+    padding: 0px 0px 0px 0px;
+    min-height: 0px;
+    border: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    box-shadow: none;
+    background: none #eb002b;
+    filter: none;
+  }
+  .nav > li > a:hover {
+    color: #ffffff;
+    background-color: #eb002b;
+  }
+}
+
+@media (min-width: 980px) {
+  .navbar-main a.brand {
+    position: absolute;
+  }
+  #navcontainer {
+    text-align: right;
+    ul li {
+      display: inline-block;
+    }
+  }
+  ul#navlist {
+    ul {
+      display: none;
+    }
+    li:hover > ul {
+      position: absolute;
+      display: block;
+      height: 33px;
+      margin: 0;
+      right: 301px;
+      background: #efefef;
+      color: #000000;
+      font-size: 12px;
+      border-bottom: 1px solid #b1b1b1;
+      border-right: 1px solid #b1b1b1;
+      border-left: 1px solid #b1b1b1;
+      -moz-border-radius-bottomright: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      font-family: 'Open Sans', sans-serif;
+      li a:hover {
+        color: #000000;
+        text-decoration: none;
+        text-shadow: none;
+        background: -moz-linear-gradient(top, rgba(191, 193, 192, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(191, 193, 192, 1)), color-stop(100%, rgba(0, 0, 0, 0)));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(191, 193, 192, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(191, 193, 192, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, rgba(191, 193, 192, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, rgba(191, 193, 192, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfc1c0', endColorstr='#00000000', GradientType=0);
+        /* IE6-9 */
+      }
+    }
+    .current a, li:hover > a {
+      color: #eb002b;
+      background: #ffffff;
+    }
+  }
+  /* APPLIES THE ACTIVE STATE */
+}
+
+@media (max-width: 979px) {
+  .navbar-main .nav > li > a {
+    padding: 9px 0;
+  }
+  #navcontainer {
+    float: left;
+    margin-bottom: 5px;
+    ul li span {
+      width: 125px;
+    }
+  }
+  .menutab {
+    display: none;
+  }
+  #navcontainer ul li ul {
+    padding-left: 20px;
+  }
+  .navbar-main a.brand {
+    margin-left: 5px;
+  }
+}
+
+.nav-collapse .nav > li > a:hover {
+  color: #ffffff;
+  background-color: #eb002b;
+}
+
+.navbar-main {
+  .nav-small {
+    float: left;
+    padding-right: 0px;
+    > li > {
+      padding: 10px;
+      a {
+        padding: 0px 10px 0px 0px;
+        margin: 0px;
+        line-height: 13px;
+      }
+    }
+  }
+  li.last a, .nav-small li.last a {
+    border: none;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 980px) {
+  .navbar-main .nav-small > li > a {
+    margin-right: 10px;
+  }
+  .navbar .nav.pull-right.top-menu li {
+    padding-left: 6px;
+  }
+}
+
+.navbar .nav.pull-right.top-menu.residential {
+  width: 650px;
+}
+
+/*TODO Remove once switcher goes to navigation*/
+
+#language-switcher {
+  list-style: none outside none;
+  li {
+    margin-left: 5px;
+    display: inline;
+  }
+}
+
+.navbar-main ul.languages {
+  border-radius: 0;
+  li {
+    padding: 5px 0;
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .text-right {
+    text-align: justify;
+  }
+}
+
+/* Sub menu */
+
+.subbar-container {
+  width: 355px;
+  position: relative;
+  background-color: #f1f1f3;
+  top: 45px;
+  float: right;
+  color: #000000;
+  font-size: 11.75px;
+  font-weight: 400;
+  text-align: right;
+  padding-bottom: 2px;
+  margin-right: 75px;
+}
+
+#sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline;
+    a {
+      color: #000000;
+      text-transform: uppercase;
+      padding: 0px 7px;
+    }
+    &:before {
+      content: "| ";
+    }
+    &:first-child:before {
+      content: "";
+    }
+  }
+}
+
+/*IE workaround*/
+/*All IE browsers*/
+
+* html #sublist {
+  li {
+    border-left: 1px solid black;
+    padding: 0 0.4em 0 0.4em;
+    margin: 0 0.4em 0 -0.4em;
+    display: block;
+    float: left;
+    &:first-child {
+      border-left: 0;
+    }
+  }
+  height: 1%;
+}
+
+/*Win IE browsers - hide from Mac IE\*/
+
+/*End hide*/
+/*Mac IE 5*/
+
+@media (max-width: 979px) {
+  .subbar-container {
+    margin-right: 0px;
+  }
+}
+
+.box {
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.box-blue {
+  background-color: #74b8bb;
+  color: #ffffff;
+}
+
+.box-grey {
+  background-color: #bab8b9;
+  color: #565656;
+}
+
+.box-light-grey {
+  color: #818286;
+  background: #eeeeee;
+}
+
+.btn {
+  border: none;
+}
+
+.btn-red {
+  background-color: #eb002b;
+  background: #eb002b;
+  color: #ffffff;
+}
+
+.btn-green {
+  background-color: #58a410;
+  background: #58a410;
+  color: #ffffff;
+}
+
+
+
+
+/*******************************************************************************
+ Share this social links
+*******************************************************************************/
+ul.social-links {
+	margin: 0px;
+	list-style: none;
+	margin-top: 10px;
+	max-width: 300px;
+	float: right;
+}
+
+@media (max-width: 767px) {
+	ul.social-links {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+}
+
+ul.social-links li {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+ul.social-links li .btn {
+	vertical-align: text-bottom;
+}
+
+
+
+/*******************************************************************************
+ Use this for the background images that are are larger than the 940px width
+ of boostrap grid. For the first one on top use bg-image-top to get the
+ padding for the nav.
+
+ Example:
+	<div class="bg-image bg-image-top">
+		<div class="container">
+			test
+		</div>
+	</div>
+*******************************************************************************/
+.bg-image {
+	background-color: transparent;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.bg-image-top {
+	padding: 80px; /* Height of the top nav */
+}
+
+.main-nav-padding {
+	padding-bottom: 80px;
+}
+
+.bg-last {
+	padding-bottom: 60px;
+}
+
+/*******************************************************************************
+ Footer
+*******************************************************************************/
+.bg-footer {
+	color: #ffffff;
+	clear: both;
+}
+
+@media (min-width: 768px) {
+	.bg-footer {
+		height: 257px;
+		min-height: 257px;
+		background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/layout/footer-background.png');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.bg-footer .footer {
+		padding-top: 82px;
+	}
+}
+
+.bg-footer .copyright {
+	background-color: #be2e1a;
+}
+
+.bg-footer .copyright p {
+	color: #d7d7d7;
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.bg-footer a {
+	color: #d7d7d7;
+}
+
+.bg-footer a:hover {
+	color: #ffffff;
+}
+
+.bg-footer h5 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+	margin: 0px;
+}
+
+.bg-footer ul {
+	font-size: 12px;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.bg-footer .social li {
+	display: inline-block;
+	margin-right: 3px;
+}
+
+.bg-footer .social a {
+	display: block;
+	width: 37px;
+	height: 39px;
+	overflow: hidden;
+}
+
+.bg-footer .social a span {
+	display: none;
+}
+
+.bg-footer .social a.pinterest {
+	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+	background-position: -3px -1px;
+}
+
+.bg-footer .social a.facebook {
+	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+	background-position: -43px 0px;
+}
+
+.bg-footer .social a.youtube {
+	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+	background-position: -83px 0px;
+}
+
+.bg-footer .social a.twitter {
+	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+	background-position: -124px 0px;
+}
+
+.bg-footer .social a.google {
+	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+	background-position: -164px 0px;
+}
+
+.accordion.footer-mobile {
+	margin-bottom: 0;
+}
+
+.footer-mobile div.accordion-heading {
+	background-color: #be2e1a;
+}
+
+.footer-mobile .accordion-inner {
+	background-color: #f5f5f5;
+
+}
+
+.footer-mobile a {
+	color: #d7d7d7;
+}
+
+.footer-mobile .accordion-heading a:hover {
+	color: #ffffff;
+}
+
+.footer-mobile .accordion-inner ul li a {
+	color: #be2e1a;
+}
+
+.footer-mobile .accordion-inner ul li a:hover {
+	color: #e23d28;
+
+}
+
+div#modalProduct.modal {
+	width: auto !important;
+}
+
+div#modalProduct.modal .modal-body {
+	width: auto !important;
+	max-height: 820px !important;
+}
+
+div#modalProduct.modal .modal-header {
+	border: 0;
+}
+

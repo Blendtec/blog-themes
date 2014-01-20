@@ -1,0 +1,116 @@
+$main-bg-color: #dcdddf;
+$main-font-color: #6d6f72;
+$second-heading-color: #ec0928;
+
+html, body {
+	font-size: 14px;
+	height: 100%;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	font-family: Lato, San-Serif;
+	color: $main-font-color;
+	background-color: $main-bg-color;
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $main-font-color;
+	font-weight: lighter;
+	margin-top: 0px;
+}
+
+a {
+	color: #bf2e1b;
+	text-shadow: none;
+}
+
+a:hover, a:focus {
+	color: #bf2e1b;
+}
+
+a.compare {
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 2px;
+}
+
+a span.font-arrow {
+	font-family: Arial;
+}
+
+.btn {
+	text-shadow: none;
+}
+
+.clearfix {
+	clear: both;
+	display: block;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.error-message {
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+}
+
+.modal-header {
+	margin-right: 5px;
+	margin-left: 5px;
+	height: 20px;
+	margin-top: 5px;
+	background-color: #bf2e1a;
+	border-radius: 5px;
+}
+
+.modal-header button.close {
+	background-image: url('//d3kqanmjpc18pw.cloudfront.net/css/images/ui-icons_ffffff_256x240.png');
+	background-repeat: no-repeat;
+	background-position: -100px -125px;
+	width: 15px;
+	opacity: 1;
+	margin-top: 0px;
+	margin-right: -8px;
+	height: 17px;
+}
+
+@media (max-width: 480px) {
+	.modal-header button.close {
+		padding: 7px;
+	}
+}
+.icon-off.logout {
+	margin-top: -1px;
+}
+
+.alert .close {
+	padding: 5px;
+}
+
+.grey-wave {
+	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/backgrounds/grey-wave.png');
+}
+
+@media (max-width: 767px) {
+	.bg-image.grey-wave {
+		background-image: none;
+		background-color: #e8e9ea;
+		border-radius: 4px;
+	}
+}
+
+
+
+label {
+	margin-bottom: 3px;
+	font-size: 16px;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	border-radius: 0px;
+}

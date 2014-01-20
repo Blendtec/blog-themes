@@ -73,13 +73,13 @@ if( isset($_POST['data']) )
 <!-- End Social Media Scripts -->
 <?php } ?>
 
-
-<div id="graybg"></div>
-<div id="header">
-<div class="container">
-	<?php get_template_part('partials/navigation'); ?>
-</div>	
-
-<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.png" alt="Blendtec banner" /></a></div>
-<div id="wrapper">
+<?php get_template_part('partials/navigation'); ?>
+	<!-- <div id="graybg"></div> -->
+	<section class="top-banner container-fluid">
+		<div class="">
+			<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.png" alt="Blendtec banner" /></a>
+		</div>
+	</section>
+	
+	<div id="wrapper" class="container-fluid">
 

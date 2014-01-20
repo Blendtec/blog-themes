@@ -32,7 +32,7 @@
 								</li>
 								<div class="menutab firsttab"></div>
 								<li class="navlink navmiddle">
-									<a href="<?php echo blendtec_url(); ?>/commercial/" title="for business"><span>for busines</span></a>
+									<a href="<?php echo blendtec_url(); ?>/commercial/" title="for business"><span>for business</span></a>
 								</li>
 								<div class="menutab lasttab"></div>
 								<li class="navlink navlast">

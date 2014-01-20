@@ -15,13 +15,13 @@ module.exports = function(grunt) {
         },
         files: {
           'css/blendtec.css' : 'sass/reduced_blendtec.scss',
-          'styles.css' : 'sass/main.scss' 
+          'style.css' : 'sass/main.scss' 
         }     
       }       
     },
     watch: {
     	sass: {
-    		files: ['sass/*.scss'],
+    		files: ['sass/*.scss', 'sass/modules/_*.scss'],
     		tasks: ['sass']
     	}
     }

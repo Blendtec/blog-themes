@@ -11,3 +11,11 @@ sitemap.xml
 wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
+
+
+#NPM/Grunt Ignores
+blendtec/node_modules
+
+
+#Sass Ignores
+blendtec/.sass-cache
