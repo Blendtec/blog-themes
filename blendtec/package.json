@@ -1,0 +1,9 @@
+{
+		"devDependencies": {
+		  "grunt": "~0.4.1", 
+		  "grunt-contrib-watch": "~0.5.3",
+		  "grunt-contrib-sass": "~0.6.0",
+		  "regexp-quote": "~0.0.0",
+		  "btoa": "~1.1.1"
+	}
+}
