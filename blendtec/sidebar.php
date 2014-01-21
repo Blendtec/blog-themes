@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div id="sidebar" class="col-md-3">
  <div id="sidebar-banner"> 	
    <a href="#modalRecipesNewsletter" arrow="1" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Image Button', 'Sign Up Newsletter', 'Sidebar Top']);"><img src="<?php bloginfo('template_directory'); ?>/images/recipe_side-1.png" alt="" /></a>
  </div>

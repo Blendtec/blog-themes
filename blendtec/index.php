@@ -2,9 +2,9 @@
 
 
 <div id="main">
-  <div id="content">
+  <div id="content" class="row">
         
-        <div id="excerpts">
+        <div id="excerpts" class="span8">
 <?php $searchquery = get_query_var('s'); ?>
 <?php if($searchquery != "") { ?>
 <header class="page-header">

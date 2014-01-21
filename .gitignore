@@ -19,3 +19,6 @@ blendtec/node_modules
 
 #Sass Ignores
 blendtec/.sass-cache
+
+#Bower Ignores
+blendtec/bower_components

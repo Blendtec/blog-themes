@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <div id="main">
-  <div id="content">
+  <div id="content" class="row">
 
-        <div id="excerpts">
+        <div id="excerpts" class="span8">
      <?php $posts = get_posts();
             foreach($posts as $post) : setup_postdata($post);
             ?>

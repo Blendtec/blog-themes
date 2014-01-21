@@ -1,9 +1,9 @@
 <?php get_header(); ?>
    
 <div id="main">
-  <div id="content">
+  <div id="content" class="row">
 
-        <div id="excerpts">
+        <div id="excerpts" class="col-md-9">
          <?php while (have_posts()) : the_post(); ?>
               <?php get_template_part( 'content', 'archive' ); ?>
           <?php endwhile; ?>

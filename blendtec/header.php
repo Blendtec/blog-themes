@@ -18,7 +18,6 @@ if( isset($_POST['data']) )
 <html lang="en">
 <head>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-<link href='http://d3kqanmjpc18pw.cloudfront.net/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 <link href='<?php bloginfo('template_directory'); ?>/css/blendtec.css' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favico.png" />
 
@@ -76,7 +75,7 @@ if( isset($_POST['data']) )
 <?php get_template_part('partials/navigation'); ?>
 	<!-- <div id="graybg"></div> -->
 	<section class="top-banner container-fluid">
-		<div class="">
+		<div>
 			<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.png" alt="Blendtec banner" /></a>
 		</div>
 	</section>

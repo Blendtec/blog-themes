@@ -1,0 +1,21 @@
+{
+  "name": "blendtec",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Blendtec/blog-themes",
+  "authors": [
+    "Lindley White <lindleywhite@gmail.com>"
+  ],
+  "description": "Bower Components",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.0.2"
+  }
+}
