@@ -8,6 +8,8 @@ Version: 1.0
 Tags: blendtec, red, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu (optional)
 
 */
+@import "modules/mixins";
+
 @charset "utf-8";
 
 $main-font-color: #6d6f72;
@@ -110,15 +112,6 @@ body {
   margin-bottom: 10px;
 }
 
-#wave {
-  background-image: url("images/Blendtec_TopSwoosh.png");
-  background-position: left top;
-  background-repeat: repeat-x;
-  height: 50px;
-  margin-top: -38px;
-  position: relative;
-  width: 100%;
-}
 
 #bottom-wave {
   background-color: #be2e1a;
@@ -149,10 +142,8 @@ body {
 
 #excerpts, #main_content {
   float: left;
-  //width: 700px;
   padding-left: 0px;
 }
-
 #single_post_details {
   clear: both;
   width: 700px;
@@ -174,6 +165,11 @@ body {
 }
 
 #main_content {
+  background-color: $white;
+  @include border-radius(5px);
+  width: 74%; 
+  @include box-shadow;
+
   h2 {
     font-size: 29px;
     color: #231f20;
@@ -188,27 +184,10 @@ body {
   h2 + p {
     margin: 0 0 15px;
   }
-}
-
-.navigation a, #commentform a {
-  color: #bf2e1a !important;
-}
-
-#main_content {
   p a, li > a {
     color: #649699  !important;
     text-decoration: underline;
   }
-}
-
-#main {
-  clear: both;
-  display: inline-block;
-  width: 100%;
-  margin: 10px 0 20px;
-}
-
-#main_content {
   h1 {
     color: #bf2e1a;
     font-weight: 300;
@@ -220,83 +199,28 @@ body {
   }
 }
 
-.fb-like, .twitter-share-button {
-  width: 90px !important;
+.navigation a, #commentform a {
+  color: #bf2e1a !important;
 }
 
-.social-buttons {
-  margin: 5px 0 10px;
-}
 
-.post_details {
-  width: 130px;
-  float: left;
-  margin-top: 10px;
-}
-
-.the_post {
-  float: right;
-  width: 530px;
-  h2 a {
-    color: #bf2e1a;
-    font-size: 29px;
-    line-height: 22px;
-    font-family: Lato,serif;
-    font-weight: 300;
-  }
-}
-
-.post_featured_img {
+#main {
   clear: both;
-  position: relative;
-  margin: 30px 0 20px;
-  max-height: 400px;
-  overflow: hidden;
-  /* this is important */
-  img {
-    min-width: 700px;
-  }
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0 20px;
 }
 
-.date_posted {
-  width: 60px;
-  height: 58px;
-  background: url(images/calendar.png) no-repeat;
-}
-
-.month_posted {
-  color: #F3F3F3;
-  font-size: 12px;
-  font-weight: 900;
-  margin: 0 auto;
-  padding: 2px 0 6px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 40px;
-}
-
-.day_posted {
-  color: #434343;
-  text-align: center;
-  font-weight: 900;
-  font-size: 31px;
-  margin: 0 auto;
-  width: 45px;
-  margin-top: -3px;
-}
-
-.author {
-  font-size: 15px;
-  color: #808285;
-  font-weight: 700;
-}
+//  ============================================================================= 
+//  Single Excerpt of Post - Blog Front Page
+//  =============================================================================
 
 .single-excerpt {
   border-bottom: 1px solid #e7e7e7;
   overflow: hidden;
   padding: 0 0 20px;
   background-color: $white;
-  border-radius: 8px;
+  @include border-radius(5px);
   padding: 25px;
   &:last-of-type {
     border-bottom: none;
@@ -307,6 +231,101 @@ body {
   +.single-excerpt {
     margin-top: 15px;
   }
+
+  .post_details {
+    width: 130px;
+    float: left;
+    margin-top: 10px;
+
+    .date_posted {
+      width: 60px;
+      height: 58px;
+      background: url(images/calendar.png) no-repeat;
+    }
+
+    .month_posted {
+      color: #F3F3F3;
+      font-size: 12px;
+      font-weight: 900;
+      margin: 0 auto;
+      padding: 2px 0 6px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 40px;
+    }
+
+    .day_posted {
+      color: #434343;
+      text-align: center;
+      font-weight: 900;
+      font-size: 31px;
+      margin: 0 auto;
+      width: 45px;
+      margin-top: -3px;
+    }
+
+    .author {
+      font-size: 15px;
+      color: #808285;
+      font-weight: 700;
+    }
+  }
+
+  .the_post {
+    float: right;
+    width: 530px;
+    h2 a {
+      color: #bf2e1a;
+      font-size: 29px;
+      line-height: 22px;
+      font-family: Lato,serif;
+      font-weight: 300;
+    }
+
+    .readmore {
+      float: right;
+      background: url("images/arrow.png") no-repeat scroll 95% center transparent;
+      a {
+        padding: 10px 20px;
+        color: #bf2e1a;
+        color: #BF2E1A;
+        display: inline-block;
+        padding: 10px 30px 10px 20px;
+        font-weight: normal;
+        font-style: normal;
+        &:hover {
+          background: #58a410 url("images/white-arrow.png") no-repeat scroll 95% center;
+          @include border-radius(5px);      
+          display: inline-block;
+          color: #fff !important;
+          text-decoration: none;
+        }
+      }
+      img {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .post_featured_img {
+    clear: both;
+    position: relative;
+    margin: 30px 0 20px;
+    max-height: 400px;
+    overflow: hidden;
+    /* this is important */
+    img {
+      min-width: 700px;
+    }
+  }
+}
+
+.fb-like, .twitter-share-button {
+  width: 90px !important;
+}
+
+.social-buttons {
+  margin: 5px 0 10px;
 }
 
 #triangle-right {
@@ -317,31 +336,7 @@ body {
   border-color: transparent transparent transparent #bf2d1a;
 }
 
-.readmore {
-  float: right;
-  background: url("images/arrow.png") no-repeat scroll 95% center transparent;
-  a {
-    padding: 10px 20px;
-    color: #bf2e1a;
-    color: #BF2E1A;
-    display: inline-block;
-    padding: 10px 30px 10px 20px;
-    font-weight: normal;
-    font-style: normal;
-    &:hover {
-      background: #58a410 url("images/white-arrow.png") no-repeat scroll 95% center;
-      -webkit-border-radius: 8px;
-      -moz-border-radius: 8px;
-      border-radius: 8px;
-      display: inline-block;
-      color: #fff !important;
-      text-decoration: none;
-    }
-  }
-  img {
-    padding-left: 10px;
-  }
-}
+
 
 .widget-title, .sidebartitle {
   background-color: #e7e8e9;
@@ -409,7 +404,7 @@ blockquote {
 
 #sidebar {
   background-color: $white;
-  border-radius: 8px;
+  @include border-radius(5px);
   padding: 25px;
   float: right;
   //padding: 30px 0;
@@ -535,81 +530,86 @@ blockquote {
   clear: both;
   position: relative;
   color: #808285;
-}
 
-#reply-title {
-  color: #bf2e1a;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 27px;
-  padding-bottom: 10px;
-  margin-bottom: 0;
-}
-
-.comment-notes {
-  margin-top: 0;
-}
-
-#commentform {
-  input {
-    background-color: #e5e5e5;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    outline: 0;
-    border: 0px;
-    height: 40px;
-    width: 98%;
-    font-size: 15px;
-    color: #434343;
+  #reply-title {
+    color: #bf2e1a;
+    font-style: italic;
     font-weight: 300;
-    padding: 0 0 0 15px;
+    font-size: 27px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
   }
-  textarea {
-    background-color: #e5e5e5;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    outline: 0;
-    border: 0px;
-    height: 200px;
-    width: 100% !important;
-    font-size: 15px;
-    padding: 10px;
-    color: #434343;
-    font-weight: 300;
+
+  .comment-notes {
+    margin-top: 0;
+  }
+
+  #commentform {
+    input {
+      background-color: #e5e5e5;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      outline: 0;
+      border: 0px;
+      height: 40px;
+      width: 98%;
+      font-size: 15px;
+      color: #434343;
+      font-weight: 300;
+      padding: 0 0 0 15px;
+    }
+    input:focus {
+      border-color: #339933;
+    }
+    textarea {
+      background-color: #e5e5e5;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      outline: 0;
+      border: 0px;
+      height: 200px;
+      width: 100% !important;
+      font-size: 15px;
+      padding: 10px;
+      color: #434343;
+      font-weight: 300;
+    }
+
+    .form-submit {
+      float: right;
+      input {
+        background: url("images/add_comment_submit_bg.png") no-repeat scroll 15px center #58a410 !important;
+        color: white !important;
+        height: 30px !important;
+        padding: 5px 20px 5px 5px !important;
+        width: 150px !important;
+        cursor: pointer;
+      }
+    }
+
+    #submit {
+        @include border-radius(5px);
+        display: inline-block;
+        color: #fff !important;
+        text-decoration: none;
+        width: 150px;
+        float: right;
+        padding: 0 20px 0 0;
+        background: #58a410 url("images/white-arrow.png") no-repeat scroll 95% center;
+    }
+    
   }
 }
 
-.form-submit {
-  float: right;
-  input {
-    background: url("images/add_comment_submit_bg.png") no-repeat scroll 15px center #58a410 !important;
-    color: white !important;
-    height: 30px !important;
-    padding: 5px 20px 5px 5px !important;
-    width: 150px !important;
-    cursor: pointer;
-  }
-}
 
-#commentform {
-  input:focus {
-    border-color: #339933;
-  }
-  #submit {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    display: inline-block;
-    color: #fff !important;
-    text-decoration: none;
-    width: 150px;
-    float: right;
-    padding: 0 20px 0 0;
-    background: #58a410 url("images/white-arrow.png") no-repeat scroll 95% center;
-  }
-}
+
+
+
+
+
+
 
 .sfw-form-submit {
   overflow: hidden;
@@ -775,9 +775,7 @@ code {
   width: 40% !important;
   margin-left: 60%;
   background-color: #58a410;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+  @include border-radius(5px);
   display: inline-block;
   color: #fff !important;
   text-decoration: none;

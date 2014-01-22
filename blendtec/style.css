@@ -100,16 +100,6 @@ body {
   margin-bottom: 10px;
 }
 
-#wave {
-  background-image: url("images/Blendtec_TopSwoosh.png");
-  background-position: left top;
-  background-repeat: repeat-x;
-  height: 50px;
-  margin-top: -38px;
-  position: relative;
-  width: 100%;
-}
-
 #bottom-wave {
   background-color: #be2e1a;
   background-position: left top;
@@ -157,6 +147,20 @@ body {
   font-weight: 300 !important;
 }
 
+#main_content {
+  background-color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  width: 74%;
+  -moz-box-shadow: 0.5px 2px 1px 0.5px rgba(0, 0, 0, 0.25);
+  /* drop shadow */
+  -webkit-box-shadow: 0.5px 2px 1px 0.5px rgba(0, 0, 0, 0.25);
+  /* drop shadow */
+  box-shadow: 0.5px 2px 1px 0.5px rgba(0, 0, 0, 0.25);
+  /* drop shadow */
+}
 #main_content h2 {
   font-size: 29px;
   color: #231f20;
@@ -171,23 +175,10 @@ body {
 #main_content h2 + p {
   margin: 0 0 15px;
 }
-
-.navigation a, #commentform a {
-  color: #bf2e1a !important;
-}
-
 #main_content p a, #main_content li > a {
   color: #649699  !important;
   text-decoration: underline;
 }
-
-#main {
-  clear: both;
-  display: inline-block;
-  width: 100%;
-  margin: 10px 0 20px;
-}
-
 #main_content h1 {
   color: #bf2e1a;
   font-weight: 300;
@@ -198,75 +189,15 @@ body {
   max-width: 700px;
 }
 
-.fb-like, .twitter-share-button {
-  width: 90px !important;
+.navigation a, #commentform a {
+  color: #bf2e1a !important;
 }
 
-.social-buttons {
-  margin: 5px 0 10px;
-}
-
-.post_details {
-  width: 130px;
-  float: left;
-  margin-top: 10px;
-}
-
-.the_post {
-  float: right;
-  width: 530px;
-}
-.the_post h2 a {
-  color: #bf2e1a;
-  font-size: 29px;
-  line-height: 22px;
-  font-family: Lato,serif;
-  font-weight: 300;
-}
-
-.post_featured_img {
+#main {
   clear: both;
-  position: relative;
-  margin: 30px 0 20px;
-  max-height: 400px;
-  overflow: hidden;
-  /* this is important */
-}
-.post_featured_img img {
-  min-width: 700px;
-}
-
-.date_posted {
-  width: 60px;
-  height: 58px;
-  background: url(images/calendar.png) no-repeat;
-}
-
-.month_posted {
-  color: #F3F3F3;
-  font-size: 12px;
-  font-weight: 900;
-  margin: 0 auto;
-  padding: 2px 0 6px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 40px;
-}
-
-.day_posted {
-  color: #434343;
-  text-align: center;
-  font-weight: 900;
-  font-size: 31px;
-  margin: 0 auto;
-  width: 45px;
-  margin-top: -3px;
-}
-
-.author {
-  font-size: 15px;
-  color: #808285;
-  font-weight: 700;
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0 20px;
 }
 
 .single-excerpt {
@@ -274,7 +205,10 @@ body {
   overflow: hidden;
   padding: 0 0 20px;
   background-color: white;
-  border-radius: 8px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
   padding: 25px;
 }
 .single-excerpt:last-of-type {
@@ -286,20 +220,56 @@ body {
 .single-excerpt + .single-excerpt {
   margin-top: 15px;
 }
-
-#triangle-right {
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 7.5px 0 7.5px 15px;
-  border-color: transparent transparent transparent #bf2d1a;
+.single-excerpt .post_details {
+  width: 130px;
+  float: left;
+  margin-top: 10px;
 }
-
-.readmore {
+.single-excerpt .post_details .date_posted {
+  width: 60px;
+  height: 58px;
+  background: url(images/calendar.png) no-repeat;
+}
+.single-excerpt .post_details .month_posted {
+  color: #F3F3F3;
+  font-size: 12px;
+  font-weight: 900;
+  margin: 0 auto;
+  padding: 2px 0 6px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 40px;
+}
+.single-excerpt .post_details .day_posted {
+  color: #434343;
+  text-align: center;
+  font-weight: 900;
+  font-size: 31px;
+  margin: 0 auto;
+  width: 45px;
+  margin-top: -3px;
+}
+.single-excerpt .post_details .author {
+  font-size: 15px;
+  color: #808285;
+  font-weight: 700;
+}
+.single-excerpt .the_post {
+  float: right;
+  width: 530px;
+}
+.single-excerpt .the_post h2 a {
+  color: #bf2e1a;
+  font-size: 29px;
+  line-height: 22px;
+  font-family: Lato,serif;
+  font-weight: 300;
+}
+.single-excerpt .the_post .readmore {
   float: right;
   background: url("images/arrow.png") no-repeat scroll 95% center transparent;
 }
-.readmore a {
+.single-excerpt .the_post .readmore a {
   padding: 10px 20px;
   color: #bf2e1a;
   color: #BF2E1A;
@@ -308,17 +278,45 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.readmore a:hover {
+.single-excerpt .the_post .readmore a:hover {
   background: #58a410 url("images/white-arrow.png") no-repeat scroll 95% center;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
   display: inline-block;
   color: #fff !important;
   text-decoration: none;
 }
-.readmore img {
+.single-excerpt .the_post .readmore img {
   padding-left: 10px;
+}
+.single-excerpt .post_featured_img {
+  clear: both;
+  position: relative;
+  margin: 30px 0 20px;
+  max-height: 400px;
+  overflow: hidden;
+  /* this is important */
+}
+.single-excerpt .post_featured_img img {
+  min-width: 700px;
+}
+
+.fb-like, .twitter-share-button {
+  width: 90px !important;
+}
+
+.social-buttons {
+  margin: 5px 0 10px;
+}
+
+#triangle-right {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 7.5px 0 7.5px 15px;
+  border-color: transparent transparent transparent #bf2d1a;
 }
 
 .widget-title, .sidebartitle {
@@ -385,7 +383,10 @@ blockquote p {
 /* SIDEBAR */
 #sidebar {
   background-color: white;
-  border-radius: 8px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
   padding: 25px;
   float: right;
 }
@@ -504,8 +505,7 @@ blockquote p {
   position: relative;
   color: #808285;
 }
-
-#reply-title {
+#comments_container #reply-title {
   color: #bf2e1a;
   font-style: italic;
   font-weight: 300;
@@ -513,12 +513,10 @@ blockquote p {
   padding-bottom: 10px;
   margin-bottom: 0;
 }
-
-.comment-notes {
+#comments_container .comment-notes {
   margin-top: 0;
 }
-
-#commentform input {
+#comments_container #commentform input {
   background-color: #e5e5e5;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -532,7 +530,10 @@ blockquote p {
   font-weight: 300;
   padding: 0 0 0 15px;
 }
-#commentform textarea {
+#comments_container #commentform input:focus {
+  border-color: #339933;
+}
+#comments_container #commentform textarea {
   background-color: #e5e5e5;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -546,11 +547,10 @@ blockquote p {
   color: #434343;
   font-weight: 300;
 }
-
-.form-submit {
+#comments_container #commentform .form-submit {
   float: right;
 }
-.form-submit input {
+#comments_container #commentform .form-submit input {
   background: url("images/add_comment_submit_bg.png") no-repeat scroll 15px center #58a410 !important;
   color: white !important;
   height: 30px !important;
@@ -558,14 +558,11 @@ blockquote p {
   width: 150px !important;
   cursor: pointer;
 }
-
-#commentform input:focus {
-  border-color: #339933;
-}
-#commentform #submit {
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+#comments_container #commentform #submit {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
   display: inline-block;
   color: #fff !important;
   text-decoration: none;
@@ -734,9 +731,10 @@ code {
   width: 40% !important;
   margin-left: 60%;
   background-color: #58a410;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
   display: inline-block;
   color: #fff !important;
   text-decoration: none;

@@ -254,7 +254,8 @@ table {
 
   @page {
     margin: 2cm .5cm;
-  }
+}
+
   p,
   h2,
   h3 {
@@ -308,7 +309,7 @@ table {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -1331,6 +1332,7 @@ hr {
 @-ms-viewport {
   width: device-width;
 }
+
 .visible-xs,
 tr.visible-xs,
 th.visible-xs,
@@ -2072,17 +2074,17 @@ ul#navlist ul a {
     color: #000000;
     text-decoration: none;
     text-shadow: none;
-    background: -moz-linear-gradient(top, #bfc1c0 0%, transparent 100%);
+    background: -moz-linear-gradient(top, #bfc1c0 0%, rgba(0, 0, 0, 0) 100%);
     /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bfc1c0), color-stop(100%, transparent));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bfc1c0), color-stop(100%, rgba(0, 0, 0, 0)));
     /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #bfc1c0 0%, transparent 100%);
+    background: -webkit-linear-gradient(top, #bfc1c0 0%, rgba(0, 0, 0, 0) 100%);
     /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #bfc1c0 0%, transparent 100%);
+    background: -o-linear-gradient(top, #bfc1c0 0%, rgba(0, 0, 0, 0) 100%);
     /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #bfc1c0 0%, transparent 100%);
+    background: -ms-linear-gradient(top, #bfc1c0 0%, rgba(0, 0, 0, 0) 100%);
     /* IE10+ */
-    background: linear-gradient(to bottom, #bfc1c0 0%, transparent 100%);
+    background: linear-gradient(to bottom, #bfc1c0 0%, rgba(0, 0, 0, 0) 100%);
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfc1c0', endColorstr='#00000000', GradientType=0);
     /* IE6-9 */
