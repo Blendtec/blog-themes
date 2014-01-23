@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div id="main">
+<div id="main" class="container">
   <div id="content" class="row">
   	<div id="main_content" >
     <?php if (have_posts()) : while (have_posts()) : the_post();  ?>
