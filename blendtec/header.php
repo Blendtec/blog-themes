@@ -74,11 +74,11 @@ if( isset($_POST['data']) )
 
 <?php get_template_part('partials/navigation'); ?>
 	<!-- <div id="graybg"></div> -->
-	<section class="top-banner container-fluid">
-		<div>
+	<section class="top-banner container">
+		<div class="row">
 			<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.png" alt="Blendtec banner" /></a>
 		</div>
 	</section>
 	
-	<div id="wrapper" class="container-fluid">
+	<div id="wrapper">
 
