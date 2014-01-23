@@ -2,7 +2,6 @@
 
 @import 'modules/globals';
 
-@import 'modules/blog-styles';
 
 
 /*******************************************************************************
@@ -93,6 +92,18 @@ ul#navlist ul a {
   z-index: 1000;
   background-color: #eb002b;
   height: 45px;
+
+  .navbar-default {
+    .navbar-header {
+      width: 100%;
+    }
+  }
+
+
+}
+.navbar-default {
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
 
 .navbar-main {
