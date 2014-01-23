@@ -1,16 +1,16 @@
 <div class="navbar-container">
-	<div class="navbar navbar-main">
-		<div class="navbar-inner">
-			<a data-target=".nav-collapse" data-toggle="collapse"
-			   class="btn btn-navbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
+	<div class="navbar  navbar-default navbar-main">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			     <span class="sr-only">Toggle navigation</span>
+			     <span class="icon-bar"></span>
+			     <span class="icon-bar"></span>
+			     <span class="icon-bar"></span>
+			   </button>
 			<a href="/" class="brand" title="Blendtec"><span>Blendtec</span></a>
 			<div class="nav-collapse collapse">
-				<div class="row-fluid pull-right">
-					<div class="span12">
+				<div class="nav navbar-nav navbar-right">
+					
 						<div id="navcontainer">
 							<ul id="navlist">
 								<li class="navlink navfirst">
@@ -40,7 +40,7 @@
 								</li>
 							</ul>
 						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
