@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div id="main">
+<div id="main" class="container">
   <div id="content" class="row">
         
         <div id="excerpts" class="span8">
