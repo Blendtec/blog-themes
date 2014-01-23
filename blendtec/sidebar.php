@@ -1,4 +1,4 @@
-<div id="sidebar" class="col-md-3">
+<div id="sidebar" class="col-md-3 col-sm-3 col-xs-12">
  <div id="sidebar-banner"> 	
    <a href="#modalRecipesNewsletter" arrow="1" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Image Button', 'Sign Up Newsletter', 'Sidebar Top']);"><img src="<?php bloginfo('template_directory'); ?>/images/recipe_side-1.png" alt="" /></a>
  </div>
@@ -54,9 +54,11 @@
   </ul>
  
   <h2 class="sidebartitle"><?php _e('Archives'); ?></h2>
-    <select class="list-archives" onChange="document.location.href=this.options[this.selectedIndex].value;">
+    <div class="select-wrap">
+      <select class="list-archives" onChange="document.location.href=this.options[this.selectedIndex].value;">
       <?php wp_get_archives('type=monthly&format=option&show_post_count=0'); ?>
-    </select>
+      </select>
+    </div>
      <?php dynamic_sidebar( $index ); ?> 
      <?php if ( !function_exists('dynamic_sidebar')|| !dynamic_sidebar() ) : ?>
      <?php endif; ?>
