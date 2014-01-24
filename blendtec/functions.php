@@ -102,6 +102,7 @@ function blendtec_scripts_styles() {
 	 * Loads our main stylesheet.
 	 */
 	wp_enqueue_style( 'blendtec-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'blendtec-script', get_template_directory_uri() . '/js/src/scripts.min.js');
 
 
 	/*
