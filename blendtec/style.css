@@ -556,6 +556,20 @@ body {
   float: left;
   clear: right;
 }
+@media (max-width: 1150px) {
+  .single-excerpt .the_post .post-details .author, .single-excerpt .the_post .post-details .date {
+    width: 40%;
+    float: left;
+    clear: right;
+  }
+}
+@media (max-width: 979px) {
+  .single-excerpt .the_post .post-details .author, .single-excerpt .the_post .post-details .date {
+    width: 50%;
+    float: left;
+    clear: right;
+  }
+}
 .single-excerpt .the_post p:first-child {
   clear: both;
   float: left;

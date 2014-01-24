@@ -2626,8 +2626,16 @@ ul#navlist ul a {
 }
 
 .navbar-default {
-  background-color: transparent !important;
+  background-color: #eb002b !important;
   border-color: transparent !important;
+  min-height: 45px;
+  height: 45px;
+}
+@media (max-width: 979px) {
+  .navbar-default {
+    height: auto;
+    border-radius: 0;
+  }
 }
 
 .navbar-main {
@@ -2646,6 +2654,18 @@ ul#navlist ul a {
 }
 .navbar-main a.brand span {
   display: none;
+}
+@media (max-width: 979px) {
+  .navbar-main .navbar-toggle {
+    display: block;
+    border-color: #fff;
+  }
+  .navbar-main .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-main .navbar-toggle:hover, .navbar-main .navbar-toggle:focus {
+    background-color: #c6121c;
+  }
 }
 
 @media (min-width: 980px) {
@@ -2721,6 +2741,28 @@ ul#navlist ul a {
   /* APPLIES THE ACTIVE STATE */
 }
 @media (max-width: 979px) {
+  .menutab {
+    display: none;
+  }
+
+  .navbar-collapse.collapse #navcontainer {
+    display: none;
+  }
+  .navbar-collapse.collapse.in #navcontainer {
+    display: block;
+  }
+  .navbar-collapse .navbar-nav {
+    width: 100%;
+  }
+  .navbar-collapse .navbar-nav #navcontainer {
+    width: 100%;
+  }
+
+  .subbar-container {
+    top: 50px;
+  }
+}
+@media (max-width: 767px) {
   .navbar-main .nav > li > a {
     padding: 9px 0;
   }
@@ -2776,6 +2818,11 @@ ul#navlist ul a {
   text-align: right;
   padding-bottom: 2px;
   margin-right: 75px;
+}
+@media (max-width: 979px) {
+  .subbar-container {
+    top: 50px;
+  }
 }
 
 #sublist {

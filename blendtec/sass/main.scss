@@ -352,6 +352,22 @@ body {
         clear: right;
       }
       margin-bottom: 10px;
+
+      @media (max-width: 1150px){
+        .author, .date {
+          width: 40%;
+          float: left;
+          clear: right;
+        }
+      }
+
+      @media (max-width: 979px){
+        .author, .date {
+          width: 50%;
+          float: left;
+          clear: right;
+        }
+      }
     }
     p:first-child {
       clear: both;
