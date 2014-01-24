@@ -50,10 +50,6 @@ if( isset($_POST['data']) )
 <!--[if lt IE 9]>
 <script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 <![endif]-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="http://www.blendtec.com/js/bootstrap.js"></script>
-<script src="http://www.blendtec.com/js/blendtec.js"></script>
-<script type="text/javascript" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
 
 </head>
 
@@ -62,13 +58,15 @@ if( isset($_POST['data']) )
 <?php if(is_single()) { ?>
 <!--Social Media Scripts -->
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+//(function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s); js.id = id;
+//   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+//   fjs.parentNode.insertBefore(js, fjs);
+// }(document, 'script', 'facebook-jssdk'));
+</script>
 <!-- End Social Media Scripts -->
 <?php } ?>
 

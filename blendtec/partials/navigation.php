@@ -1,14 +1,15 @@
 <div class="navbar-container">
-	<div class="navbar  navbar-default navbar-main">
+	<div class="navbar navbar-default navbar-main" role="navigation">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navbar-collapse">
 			     <span class="sr-only">Toggle navigation</span>
 			     <span class="icon-bar"></span>
 			     <span class="icon-bar"></span>
 			     <span class="icon-bar"></span>
 			   </button>
 			<a href="/" class="brand" title="Blendtec"><span>Blendtec</span></a>
-			<div class="nav-collapse collapse">
+		</div>
+		<div class="collapse navbar-collapse main-navbar-collapse">
 				<div class="nav navbar-nav navbar-right">
 					
 						<div id="navcontainer">
@@ -42,8 +43,8 @@
 						</div>
 					
 				</div>
-			</div>
 		</div>
+		
 	</div>
 </div>
 <div class="container-fluid">
