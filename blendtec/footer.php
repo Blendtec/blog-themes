@@ -12,75 +12,81 @@
 
 
 
- <div id="bottom-wave">
-<div class="bg-footer">
 
-<div class="container">
-		<div class="row-fluid footer">
-			<div class="span3">
-				<h5>Company</h5>
-				<ul>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/about">About Us</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/careers">Career Opportunities</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/affiliates">Affiliates</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/dealers">Dealers</a>					</li>
-				</ul>
-			</div>
-			<div class="span3">
-				<h5>Customer Support</h5>
-				<ul>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/support/use_and_care">Use and Care</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/return-policy">Return Policy</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/contact">Contact Us</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/support/faq">FAQs</a>					</li>
-				</ul>
-			</div>
-			<div class="span3">
-				<h5>Resources</h5>
-				<ul>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/blog">Blog</a>					</li>					
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/products/registration">Product Registration</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/support/guides">User Guides</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/privacy-policy">Privacy Policy</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/tos">Terms &amp; Conditions</a>					</li>
-				</ul>
-			</div>
-			<div class="span3">
-				<h5>Connect</h5>
-				<ul class="social">
-					<li>
-						<a href="https://www.Pinterest.com/Blendtec" class="pinterest" title="Pinterest" target="_blank"><span>Pinterest</span></a>					</li>
-					<li>
-						<a href="http://www.facebook.com/Blendtec" class="facebook" title="Facebook" target="_blank"><span>Facebook</span></a>					</li>
-					<li>
-						<a href="http://www.youtube.com/user/blendteconsumer" class="youtube" title="You Tube" target="_blank"><span>You Tube</span></a>					</li>
-					<li>
-						<a href="https://twitter.com/Blendtec" class="twitter" title="Twitter" target="_blank"><span>Twitter</span></a>					</li>
-					<li>
-						<a href="https://plus.google.com/100704381839331949468" class="google" rel="publisher" title="Google Plus" target="_blank"><span>Google Plus</span></a>					</li>
-				</ul>
+<footer class="wrap">
+	<div class="bg-footer">
+		<div class="container">
+				<div class="row-fluid footer">
+					<div class="col-md-8 col-sm-8 col-xs-8">
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<h5>Company</h5>
+							<ul>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/company/about">About Us</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/careers">Career Opportunities</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/affiliates">Affiliates</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/dealers">Dealers</a>					</li>
+							</ul>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<h5>Customer Support</h5>
+							<ul>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/support/use_and_care">Use and Care</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/company/return-policy">Return Policy</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/company/contact">Contact Us</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/support/faq">FAQs</a>					</li>
+							</ul>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<h5>Resources</h5>
+							<ul>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/blog">Blog</a>					</li>					
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/products/registration">Product Registration</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/support/guides">User Guides</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/company/privacy-policy">Privacy Policy</a>					</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/company/tos">Terms &amp; Conditions</a>					</li>
+							</ul>
+						</div>
+					</div>
+					
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<h5>Connect</h5>
+							<ul class="social">
+								<li>
+									<a href="https://www.Pinterest.com/Blendtec" class="pinterest" title="Pinterest" target="_blank"><span>Pinterest</span></a>					</li>
+								<li>
+									<a href="http://www.facebook.com/Blendtec" class="facebook" title="Facebook" target="_blank"><span>Facebook</span></a>					</li>
+								<li>
+									<a href="http://www.youtube.com/user/blendteconsumer" class="youtube" title="You Tube" target="_blank"><span>You Tube</span></a>					</li>
+								<li>
+									<a href="https://twitter.com/Blendtec" class="twitter" title="Twitter" target="_blank"><span>Twitter</span></a>					</li>
+								<li>
+									<a href="https://plus.google.com/100704381839331949468" class="google" rel="publisher" title="Google Plus" target="_blank"><span>Google Plus</span></a>					</li>
+							</ul>
+						</div>
+					
+					<p class="copyright col-md-12 col-sm-12 col-xs-12">
+						&copy; 2013 Blendtec, a division <br /> of K-TEC, Inc. All Rights Reserved.
+					</p>
+				</div>
+				
 			</div>
 		</div>
-		<p class="copyright">
-			&copy; 2013 Blendtec, a division of K-TEC, Inc. All Rights Reserved.
-		</p>
 	</div>
-</div>
-</div>
-</div>
+</footer>
+
 <script type="text/javascript">
 // (function() {
 //     window.PinIt = window.PinIt || { loaded:false };

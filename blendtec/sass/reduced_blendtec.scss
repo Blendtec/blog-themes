@@ -2,7 +2,9 @@
 
 @import 'modules/globals';
 
-
+$main-font-color: #6d6f72;
+$white: #fff;
+$red-font: #e90129;
 
 /*******************************************************************************
  Responsive redesign stuff
@@ -404,99 +406,108 @@ ul.social-links li .btn {
 
 /*******************************************************************************
  Footer
-*******************************************************************************/
+******************************************************************************/
+footer.wrap {
+  background-color: $white;
+  border: 1px solid #e6e7e9;
+
+}
 .bg-footer {
-	color: #ffffff;
-	clear: both;
+  color: #ffffff;
+  clear: both;
+  .container {
+    padding: 0;
+
+    .footer div {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  .copyright {    
+      color: #000000;
+      font-size: 12px;
+      margin-bottom: 0;
+      padding-left: 0;
+      text-transform: uppercase;
+  }
+  a {
+    color: #000000;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+
+    }
+  }
+  h5 {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #000000;
+    margin: 0px 0px 5px;
+    text-transform: uppercase;
+  }
+  ul {
+    font-size: 9pt;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+
+    li {
+      line-height: 20px;
+    }
+  }
+  .social {
+    li {
+      display: inline-block;
+      margin-right: 3px;
+      
+    }
+    a {
+      display: block;
+      width: 37px;
+      height: 39px;
+      overflow: hidden;
+      span {
+        display: none;
+      }
+      &.pinterest {
+        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+        background-position: -3px -1px;
+      }
+      &.facebook {
+        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+        background-position: -43px 0px;
+      }
+      &.youtube {
+        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+        background-position: -83px 0px;
+      }
+      &.twitter {
+        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+        background-position: -124px 0px;
+      }
+      &.google {
+        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+        background-position: -164px 0px;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
-	.bg-footer {
-		height: 257px;
-		min-height: 257px;
-		background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/layout/footer-background.png');
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-
-	.bg-footer .footer {
-		padding-top: 82px;
-	}
+  .bg-footer {
+    height: 257px;
+    min-height: 257px;
+    background-repeat: no-repeat;
+    background-position: center;
+    .footer {
+      padding-top: 20px;
+    }
+  }
 }
-
-.bg-footer .copyright {
-	background-color: #be2e1a;
-}
-
-.bg-footer .copyright p {
-	color: #d7d7d7;
-	font-size: 12px;
-	margin-bottom: 0;
-}
-
-.bg-footer a {
-	color: #d7d7d7;
-}
-
-.bg-footer a:hover {
-	color: #ffffff;
-}
-
-.bg-footer h5 {
-	font-size: 14px;
-	font-weight: bold;
-	color: #ffffff;
-	margin: 0px;
-}
-
-.bg-footer ul {
-	font-size: 12px;
-	padding: 0px;
-	margin: 0px;
-	list-style: none;
-}
-
-.bg-footer .social li {
-	display: inline-block;
-	margin-right: 3px;
-}
-
-.bg-footer .social a {
-	display: block;
-	width: 37px;
-	height: 39px;
-	overflow: hidden;
-}
-
-.bg-footer .social a span {
-	display: none;
-}
-
-.bg-footer .social a.pinterest {
-	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-	background-position: -3px -1px;
-}
-
-.bg-footer .social a.facebook {
-	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-	background-position: -43px 0px;
-}
-
-.bg-footer .social a.youtube {
-	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-	background-position: -83px 0px;
-}
-
-.bg-footer .social a.twitter {
-	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-	background-position: -124px 0px;
-}
-
-.bg-footer .social a.google {
-	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-	background-position: -164px 0px;
-}
-
 .accordion.footer-mobile {
 	margin-bottom: 0;
 }

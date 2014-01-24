@@ -29,7 +29,7 @@ input, textarea, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 120%;
 }
 
@@ -414,7 +414,6 @@ blockquote {
     }
   }
 
-
   .select-wrap {
     width: 80%;
     margin: 0 auto;
@@ -617,13 +616,6 @@ blockquote {
   }
 }
 
-.sfw-form-submit {
-  overflow: hidden;
-}
-
-label ~ span.sfw-required {
-  margin: -1.68571rem 0 0 -0.6rem;
-}
 
 code {
   white-space: normal;
@@ -633,42 +625,15 @@ code {
 }
 
 /* END COMMENTS */
-/* FOOTER */
 
-.bg-footer .span3 {
-  border-right: 2px solid #CB5848;
-  float: left;
-  &:last-child {
-    border: none;
-  }
-}
-
-
-
-.footer-divider {
-  width: 1200px;
-  height: 74px;
-  margin: 0px auto;
-  background: url(images/blendtec_28.jpg) no-repeat;
-}
-
-
+//  ============================================================================= 
+//  Footer
+//  =============================================================================
 .footer_copyright {
   width: 100%;
   clear: both;
 }
 
-.bg-footer .social li {
-  width: 32px;
-}
-
-.navbar .nav.pull-right.top-menu {
-  width: 650px;
-}
-
-.navbar-main .nav > li > a {
-  font-weight: 300;
-}
 
 /*wordpress generated classes*/
 

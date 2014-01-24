@@ -2647,20 +2647,6 @@ ul#navlist ul a {
 .navbar-main a.brand span {
   display: none;
 }
-.navbar-main .navbar-inner {
-  padding: 0px 0px 0px 0px;
-  min-height: 0px;
-  border: none;
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  box-shadow: none;
-  background: none #eb002b;
-  filter: none;
-}
-.navbar-main .nav > li > a:hover {
-  color: #ffffff;
-  background-color: #eb002b;
-}
 
 @media (min-width: 980px) {
   .navbar-main a.brand {
@@ -2762,56 +2748,6 @@ ul#navlist ul a {
 .nav-collapse .nav > li > a:hover {
   color: #ffffff;
   background-color: #eb002b;
-}
-
-.navbar-main .nav-small {
-  float: left;
-  padding-right: 0px;
-}
-.navbar-main .nav-small > li > {
-  padding: 10px;
-}
-.navbar-main .nav-small > li > a {
-  padding: 0px 10px 0px 0px;
-  margin: 0px;
-  line-height: 13px;
-}
-.navbar-main li.last a, .navbar-main .nav-small li.last a {
-  border: none;
-  padding-right: 0px;
-  margin-right: 0px;
-}
-
-@media (min-width: 980px) {
-  .navbar-main .nav-small > li > a {
-    margin-right: 10px;
-  }
-
-  .navbar .nav.pull-right.top-menu li {
-    padding-left: 6px;
-  }
-}
-.navbar .nav.pull-right.top-menu.residential {
-  width: 650px;
-}
-
-/*TODO Remove once switcher goes to navigation*/
-#language-switcher {
-  list-style: none outside none;
-}
-#language-switcher li {
-  margin-left: 5px;
-  display: inline;
-}
-
-.navbar-main ul.languages {
-  border-radius: 0;
-}
-.navbar-main ul.languages li {
-  padding: 5px 0;
-}
-.navbar-main ul.languages li span {
-  margin-left: 10px;
 }
 
 .text-right {
@@ -2983,98 +2919,100 @@ ul.social-links li .btn {
 
 /*******************************************************************************
  Footer
-*******************************************************************************/
+******************************************************************************/
+footer.wrap {
+  background-color: white;
+  border: 1px solid #e6e7e9;
+}
+
 .bg-footer {
   color: #ffffff;
   clear: both;
 }
-
-@media (min-width: 768px) {
-  .bg-footer {
-    height: 257px;
-    min-height: 257px;
-    background-image: url("//d3kqanmjpc18pw.cloudfront.net/img/layout/footer-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .bg-footer .footer {
-    padding-top: 82px;
-  }
+.bg-footer .container {
+  padding: 0;
+}
+.bg-footer .container .footer div:first-child {
+  padding-left: 0;
+}
+.bg-footer .container .footer div:last-child {
+  padding-right: 0;
 }
 .bg-footer .copyright {
-  background-color: #be2e1a;
-}
-
-.bg-footer .copyright p {
-  color: #d7d7d7;
+  color: #000000;
   font-size: 12px;
   margin-bottom: 0;
+  padding-left: 0;
+  text-transform: uppercase;
 }
-
 .bg-footer a {
-  color: #d7d7d7;
+  color: #000000;
+  text-transform: uppercase;
 }
-
 .bg-footer a:hover {
-  color: #ffffff;
+  text-decoration: underline;
 }
-
 .bg-footer h5 {
-  font-size: 14px;
+  font-size: 10pt;
   font-weight: bold;
-  color: #ffffff;
-  margin: 0px;
+  color: #000000;
+  margin: 0px 0px 5px;
+  text-transform: uppercase;
 }
-
 .bg-footer ul {
-  font-size: 12px;
+  font-size: 9pt;
   padding: 0px;
   margin: 0px;
   list-style: none;
 }
-
+.bg-footer ul li {
+  line-height: 20px;
+}
 .bg-footer .social li {
   display: inline-block;
   margin-right: 3px;
 }
-
 .bg-footer .social a {
   display: block;
   width: 37px;
   height: 39px;
   overflow: hidden;
 }
-
 .bg-footer .social a span {
   display: none;
 }
-
 .bg-footer .social a.pinterest {
   background-image: url("//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png");
   background-position: -3px -1px;
 }
-
 .bg-footer .social a.facebook {
   background-image: url("//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png");
   background-position: -43px 0px;
 }
-
 .bg-footer .social a.youtube {
   background-image: url("//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png");
   background-position: -83px 0px;
 }
-
 .bg-footer .social a.twitter {
   background-image: url("//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png");
   background-position: -124px 0px;
 }
-
 .bg-footer .social a.google {
   background-image: url("//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png");
   background-position: -164px 0px;
 }
 
+@media (min-width: 768px) {
+  .bg-footer {
+    height: 257px;
+    min-height: 257px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .bg-footer .footer {
+    padding-top: 20px;
+  }
+}
 .accordion.footer-mobile {
   margin-bottom: 0;
 }
