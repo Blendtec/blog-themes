@@ -13,11 +13,11 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
- 			<div id="single_post_details">
-          <ul id="post_details_list">
-            <li>By <?php the_author_posts_link(); ?></li>
-            <li><?php the_time('F jS, Y'); ?></li>
-            <li>Add Comment</li>
+ 			<div id="single-post-details">
+          <ul id="post-details">
+            <li class="author"><i class="icon-user"></i><?php the_author() ?></li>
+            <li class='date'><i class="icon-clock"></i><?php the_time("d F, Y") ?></li>
+            <li class="tags-container"><i class="icon-tags"></i><?php the_tags(); ?></li>
          </ul>
       </div>
       
@@ -32,8 +32,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-
-
      <div class="postauthor">
     <div class="author_title">ABOUT THE AUTHOR</div>
     	<div class="author_avatar">
@@ -45,10 +43,9 @@
     	</div>
     	<div class="clear-both"></div>
     </div>
-
-    <div id="tags_container"><?php the_tags(); ?></div>
-				<div id="comments_container">
-				<?php comments_template( '', true ); ?>
-</div>
+    <div id="comments_container">
+      <?php comments_template( '', true ); ?>
+    </div>
+				
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

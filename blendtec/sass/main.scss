@@ -124,17 +124,7 @@ body {
 
 #main {
   padding: 0;
-}
-
-#bottom-wave {
-  background-color: #be2e1a;
-  background-position: left top;
-  background-repeat: repeat-x;
-  border: 0 none;
-  bottom: 0;
-  height: 257px;
-  min-height: 257px;
-  min-width: 1200px;
+  padding-bottom: 20px;
 }
 
 .widget {
@@ -154,7 +144,13 @@ body {
       width: 100%;
     }
   }
+
+  @media (max-width: 768px){
+    width: 100%;
+  }
 }
+
+@import "modules/sidebar";
 
 
 /* END LAYOUT and SWOOSH */
@@ -174,32 +170,16 @@ body {
   float: left;
   padding-left: 0px;
 }
-#single_post_details {
-  clear: both;
-  width: 700px;
-  color: #808285;
-  font-weight: 300;
-  font-size: 15px;
-}
-
-#post_details_list {
-  margin: 0 0 10px;
-  li {
-    display: inline;
-    padding: 0 0 10px;
-    a {
-      color: #808285 !important;
-      font-weight: 300 !important;
-    }
-  }
-}
 
 #main_content {
   background-color: $white;
   @include border-radius(5px);
-  width: 74%; 
+  width: 74%;
   @include box-shadow;
-
+  @media (max-width: 768px){
+    width: 100%;
+    margin-bottom: 20px;
+  }
   h2 {
     font-size: 29px;
     color: #231f20;
@@ -225,14 +205,108 @@ body {
     font-size: 38px;
   }
   img {
-    max-width: 700px;
+   
+  }
+
+  article.post {
+    width: 90%; 
+    margin: 0 auto;
+    .entry-title {
+      margin-top: 2rem;
+    }
+    #single-post-details {
+      clear: both;
+      color: #808285;
+      font-weight: 300;
+      font-size: 15px;
+
+      #post-details {
+        width: 100%;
+        height: 2rem;
+        padding: 0;
+        .author, .date, .tags-container {
+          float: left;
+          clear: right;
+          display: inline-block;
+          margin-right: 2rem;
+        }
+
+
+
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .postauthor {
+    background: #E7E8E9;
+    padding: 10px 10px 15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  .author_avatar {
+    float: left;
+    margin: 0;
+    width: 25%;
+
+    img {
+
+    }
+  }
+
+  .author_description {
+    float: left;
+    font-size: 13px;
+    line-height: 140%;
+    width: 75%;
+    color: #231f20;
+  }
+
+  .author_title {
+    color: #bf2e1a;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 27px;
+    padding-bottom: 10px;
+  }
+
+  img.wp-image-* {
+    width: 100%;
   }
 }
+
 
 .navigation a, #commentform a {
   color: #bf2e1a !important;
 }
 
+
+#nav-below {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  div {
+    text-align: center;
+
+    background-color: $white;
+    @include box-shadow;
+    @include border-radius(5px);
+    width: 20%;
+
+    &.nav-previous {
+      float: left;
+    }
+    &.nav-next {
+      float: right;
+    }
+    a {
+      padding: 10px 0;
+      display: block;
+    }
+  }
+}
 
 //  ============================================================================= 
 //  Single Excerpt of Post - Blog Front Page
@@ -266,6 +340,24 @@ body {
       font-family: Lato,serif;
       font-weight: 300;
     }
+    h2 {
+      margin-bottom: 10px;
+    }
+    .post-details {
+      width: 100%;
+      height: 2rem;
+      .author, .date {
+        width: 20%;
+        float: left;
+        clear: right;
+      }
+      margin-bottom: 10px;
+    }
+    p:first-child {
+      clear: both;
+      float: left;
+    }
+    
 
     .readmore {
       float: right;
@@ -278,11 +370,10 @@ body {
         font-weight: normal;
         font-style: normal;
         &:hover {
-          background: #58a410 url("images/white-arrow.png") no-repeat scroll 95% center;
+          background: url("images/arrow.png") no-repeat scroll 95% center;
           @include border-radius(5px);      
           display: inline-block;
-          color: #fff !important;
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
       img {
@@ -348,159 +439,8 @@ blockquote {
 }
 
 /* END CONTENT */
-/* AUTHOR STYLE */
-
-.postauthor {
-  max-width: 700px;
-  background: #E7E8E9;
-  padding: 10px 10px 15px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.author_avatar {
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-.author_description {
-  float: left;
-  font-size: 13px;
-  line-height: 140%;
-  width: 510px;
-  color: #231f20;
-}
-
-.author_title {
-  color: #bf2e1a;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 27px;
-  padding-bottom: 10px;
-}
-
-/* END AUTHOR STYLE */
-/* SIDEBAR */
-
-#sidebar {
-  background-color: $white;
-  @include border-radius(5px);
-  padding: 25px 0px;
-  float: right;
-  position: relative;
-  @include box-shadow;
-  z-index: 1;
-  h3 {
-    margin-bottom: 10px;
-  }
-  ul {
-    padding: 0;
-    margin: 0;
-    li {
-      list-style: none;
-      border-bottom: #dddddd 1px solid;
-      padding: 10px;
-      display: inline-block;
-      clear: both;
-      width: 100%;
-
-      a {
-        color: $red-font;
-        font-weight: 400;
-        font-size: 13px;
-      }
-    }
-  }
-
-  .select-wrap {
-    width: 80%;
-    margin: 0 auto;
-
-    select {
-      width: 100%;
-    }
-    
-  }
-
-  .sidebartitle {
-    background-color: $white;
-    padding: 20px 10px 10px;
-    font-weight: 700;
-    font-size: 17px;
-    color: #6e6e70;
-    position: relative;
-    //z-index: 1;
-    @include sidebar-title;
-  }
-
-  .post-sidebar {
-    vertical-align: middle;
-    color: $red-font;
-
-    .post-sidebar-title {
-      float: left;
-      width: 80%;
-    }
-  }
-}
 
 
-
-.post-sidebar-title {
-  float: left;
-  width: 80%;
-}
-
-.post-sidebar-arrow {
-  float: right;
-  width: 15%;
-  height: 20px;
-  vertical-align: middle;
-  background: url('images/arrow.png') top right no-repeat;
-  margin-top: 2px;
-}
-
-#sidebar-join {
-  background: #75b8bc;
-  padding: 20px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  p {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-#sidebar-banner {
-  margin-bottom: 30px;
-}
-
-#sidebar {
-  
-  
-}
-
-#red-button {
-  margin-top: 10px;
-  text-align: center;
-  a:hover {
-    text-decoration: none;
-  }
-}
-
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  display: inline-block;
-  border-left: 10px solid #f3f3f3;
-}
 
 /* END SIDEBAR */
 
@@ -522,20 +462,6 @@ blockquote {
   }
 }
 
-/* TAGS */
-
-#tags_container {
-  color: #808285;
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 20px;
-  a {
-    color: #808285;
-    text-decoration: underline;
-    font-weight: 400;
-    font-size: 13px;
-  }
-}
 
 /* COMMENTS */
 
@@ -657,6 +583,7 @@ code {
     /* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
     border-radius: 3px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
   }
   .wp-caption {
     max-width: 100%;

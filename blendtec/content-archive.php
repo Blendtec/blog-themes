@@ -9,7 +9,9 @@
   <?php endif; ?>
   <div class="the_post">
     <h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-    <div class="author"><i class="icon-user"></i><?php the_author() ?></div><div class='date'><i class="icon-clock"></i><?php the_time("d F, Y") ?></div>
+    <div class="post-details">
+      <div class="author"><i class="icon-user"></i><?php the_author() ?></div><div class='date'><i class="icon-clock"></i><?php the_time("d F, Y") ?></div>
+    </div>
     <p><?php the_excerpt();?></p>
   </div>
 </div><!-- single-excerpt -->
