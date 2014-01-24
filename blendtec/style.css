@@ -682,73 +682,11 @@ code {
   border: none;
 }
 
-#footer {
-  width: 1200px;
-  margin: 40px auto 0;
-  background-color: #bf2e1a;
-  color: #f3f3f3;
-  font-size: 12px;
-  font-weight: 400;
-  padding-bottom: 50px;
-}
-
 .footer-divider {
   width: 1200px;
   height: 74px;
   margin: 0px auto;
   background: url(images/blendtec_28.jpg) no-repeat;
-}
-
-#footer-content {
-  width: 950px;
-  margin: 0px auto;
-}
-
-#footer-left-content {
-  width: 700px;
-  float: left;
-}
-
-#footer-right-content {
-  float: right;
-  left: 70%;
-  position: absolute;
-}
-
-#footer-content-single {
-  display: inline-block;
-  padding-right: 100px;
-}
-
-#footer-content-title, #footer-social-title {
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-#footer-content-list {
-  padding: 0;
-  color: #f3f3f;
-  margin-top: 0px;
-}
-#footer-content-list li {
-  padding-top: 0px;
-  list-style: none;
-  font-size: 12px;
-  font-weight: 400;
-}
-#footer-content-list li a {
-  color: #f3f3f3 !important;
-}
-#footer-content-list li a:hover {
-  text-decoration: underline;
-}
-
-#footer-social ul {
-  padding: 0;
-}
-#footer-social ul li {
-  display: inline;
 }
 
 .footer_copyright {

@@ -98,8 +98,6 @@ ul#navlist ul a {
       width: 100%;
     }
   }
-
-
 }
 .navbar-default {
     background-color: transparent !important;
@@ -122,20 +120,6 @@ ul#navlist ul a {
   max-width: 1170px;
   margin: auto;
   font-family: 'Open Sans', sans-serif;
-  .navbar-inner {
-    padding: 0px 0px 0px 0px;
-    min-height: 0px;
-    border: none;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    box-shadow: none;
-    background: none #eb002b;
-    filter: none;
-  }
-  .nav > li > a:hover {
-    color: #ffffff;
-    background-color: #eb002b;
-  }
 }
 
 @media (min-width: 980px) {
@@ -149,6 +133,7 @@ ul#navlist ul a {
       vertical-align: top;
     }
   }
+  //======= Secondary Nav Defaults =======//
   ul#navlist {
     ul {
       display: none;
@@ -238,58 +223,6 @@ ul#navlist ul a {
   background-color: #eb002b;
 }
 
-.navbar-main {
-  .nav-small {
-    float: left;
-    padding-right: 0px;
-    > li > {
-      padding: 10px;
-      a {
-        padding: 0px 10px 0px 0px;
-        margin: 0px;
-        line-height: 13px;
-      }
-    }
-  }
-  li.last a, .nav-small li.last a {
-    border: none;
-    padding-right: 0px;
-    margin-right: 0px;
-  }
-}
-
-@media (min-width: 980px) {
-  .navbar-main .nav-small > li > a {
-    margin-right: 10px;
-  }
-  .navbar .nav.pull-right.top-menu li {
-    padding-left: 6px;
-  }
-}
-
-.navbar .nav.pull-right.top-menu.residential {
-  width: 650px;
-}
-
-/*TODO Remove once switcher goes to navigation*/
-
-#language-switcher {
-  list-style: none outside none;
-  li {
-    margin-left: 5px;
-    display: inline;
-  }
-}
-
-.navbar-main ul.languages {
-  border-radius: 0;
-  li {
-    padding: 5px 0;
-    span {
-      margin-left: 10px;
-    }
-  }
-}
 
 .text-right {
   text-align: right;
