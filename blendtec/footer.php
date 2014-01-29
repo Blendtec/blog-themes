@@ -77,7 +77,7 @@
 									<a href="https://twitter.com/Blendtec" class="twitter" title="Twitter" target="_blank"><span>Twitter</span></a>
 								</li>
 								<li>
-									<a href="https://plus.google.com/100704381839331949468" class="google" rel="publisher" title="Google Plus" target="_blank"><span>Google Plus</span></a>
+									<a href="https://plus.google.com/+Blendtec" class="google" rel="publisher" title="Google Plus" target="_blank"><span>Google Plus</span></a>
 								</li>
 								<li>
 									<a href="http://instagram.com/blendtec" class="instagram" rel="publisher" title="Instagram" target="_blank"><span>Instagram</span></a>
