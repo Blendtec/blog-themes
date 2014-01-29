@@ -532,24 +532,28 @@ footer.wrap {
         display: none;
       }
       &.pinterest {
-        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
+        background-image: url('../images/social_sprite.png');
         background-position: -3px -1px;
       }
       &.facebook {
-        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-        background-position: -43px 0px;
+        background-image: url('../images/social_sprite.png');
+        background-position: -39px -1px;
       }
       &.youtube {
-        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-        background-position: -83px 0px;
+        background-image: url('../images/social_sprite.png');
+        background-position: -78px -1px;
       }
       &.twitter {
-        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-        background-position: -124px 0px;
+        background-image: url('../images/social_sprite.png');
+        background-position: -118px -1px;
       }
       &.google {
-        background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/icons/social.png');
-        background-position: -164px 0px;
+        background-image: url('../images/social_sprite.png');
+        background-position: -156px -1px;
+      }
+      &.instagram {
+        background-image: url('../images/social_sprite.png');
+        background-position: -196px -1px;
       }
     }
   }

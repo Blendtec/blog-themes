@@ -65,15 +65,23 @@
 							<h5>Connect</h5>
 							<ul class="social">
 								<li>
-									<a href="https://www.Pinterest.com/Blendtec" class="pinterest" title="Pinterest" target="_blank"><span>Pinterest</span></a>					</li>
+									<a href="https://www.Pinterest.com/Blendtec" class="pinterest" title="Pinterest" target="_blank"><span>Pinterest</span></a>
+								</li>
 								<li>
-									<a href="http://www.facebook.com/Blendtec" class="facebook" title="Facebook" target="_blank"><span>Facebook</span></a>					</li>
+									<a href="http://www.facebook.com/Blendtec" class="facebook" title="Facebook" target="_blank"><span>Facebook</span></a>
+								</li>
 								<li>
-									<a href="http://www.youtube.com/user/blendteconsumer" class="youtube" title="You Tube" target="_blank"><span>You Tube</span></a>					</li>
+									<a href="http://www.youtube.com/user/blendteconsumer" class="youtube" title="You Tube" target="_blank"><span>You Tube</span></a>
+								</li>
 								<li>
-									<a href="https://twitter.com/Blendtec" class="twitter" title="Twitter" target="_blank"><span>Twitter</span></a>					</li>
+									<a href="https://twitter.com/Blendtec" class="twitter" title="Twitter" target="_blank"><span>Twitter</span></a>
+								</li>
 								<li>
-									<a href="https://plus.google.com/100704381839331949468" class="google" rel="publisher" title="Google Plus" target="_blank"><span>Google Plus</span></a>					</li>
+									<a href="https://plus.google.com/100704381839331949468" class="google" rel="publisher" title="Google Plus" target="_blank"><span>Google Plus</span></a>
+								</li>
+								<li>
+									<a href="http://instagram.com/blendtec" class="instagram" rel="publisher" title="Instagram" target="_blank"><span>Instagram</span></a>
+								</li>
 							</ul>
 						</div>
 					
