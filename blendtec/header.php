@@ -69,7 +69,7 @@ if( isset($_POST['data']) )
 </script>
 <!-- End Social Media Scripts -->
 <?php } ?>
-
+<?php get_template_part('partials/recipemodal'); ?>
 <?php get_template_part('partials/navigation'); ?>
 	<!-- <div id="graybg"></div> -->
 	<section class="top-banner container">

@@ -10,7 +10,8 @@ module.exports = function(grunt) {
     sass: {
       development: {
         options: {
-          style: 'expanded'
+          style: 'expanded',
+          loadPath: ['bower_components/bootstrap-sass/lib/']
         },
         files: {
           'css/blendtec.css' : 'sass/reduced_blendtec.scss',
@@ -31,7 +32,8 @@ module.exports = function(grunt) {
       },
       all: ['js/*.js',
             '!js/scripts.js',
-            '!js/scripts.min.js'
+            '!js/scripts.min.js',
+            '!js/html5shiv.js'
       ]
     },
     concat: {

@@ -1,4 +1,4 @@
-@import '../bower_components/bootstrap-sass/lib/bootstrap.scss';
+@import 'modules/bootstrap-interface';
 
 @import 'modules/globals';
 
@@ -388,8 +388,8 @@ ul#navlist ul a {
 }
 
 .btn-red {
-  background-color: #eb002b;
-  background: #eb002b;
+  background-color: $red-font;
+  background: $red-font;
   color: #ffffff;
 }
 
