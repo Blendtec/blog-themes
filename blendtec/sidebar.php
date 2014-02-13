@@ -1,6 +1,6 @@
 <div id="sidebar" class="col-md-3 col-sm-3 col-xs-12">
  <div id="sidebar-banner"> 	
-   <a href="#" arrow="1" data-toggle="modal" data-target="#modalRecipesNewsletter" ><img src="<?php bloginfo('template_directory'); ?>/images/recipe_side-1.png" alt="" /></a>
+   <a href="#" arrow="1" data-toggle="modal" data-target="#modalRecipesNewsletter" onclick="_gaq.push(['_trackEvent', 'Image Button', 'Sign Up Newsletter', 'Sidebar Top']);"><img src="<?php bloginfo('template_directory'); ?>/images/recipe_side-1.png" alt="" /></a>
  </div>
 
 
