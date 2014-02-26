@@ -3,7 +3,7 @@
   <?php if ( has_post_thumbnail()) : ?>
     <div class="post_featured_img">
         <div class="image_wrap">
-          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'full'); ?></a>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'featured-image'); ?></a>
         </div>
     </div>
   <?php endif; ?>
