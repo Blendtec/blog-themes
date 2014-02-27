@@ -2065,7 +2065,6 @@ $(document).ready(function(){
 });
 $(window).on('debouncedresize', function(){
 	BlendtecBlog.MakeMobileFooterClickable();
-	console.log($(window).width());
 });
 
 })(jQuery);
