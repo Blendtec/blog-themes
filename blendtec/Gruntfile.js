@@ -30,7 +30,9 @@ module.exports = function(grunt) {
       gruntfile: {
         src: 'Gruntfile.js'
       },
-      all: ['js/*.js',
+      all: [
+            'js/*.js',
+            '!js/debounce.js',
             '!js/scripts.js',
             '!js/scripts.min.js',
             '!js/html5shiv.js'
@@ -43,7 +45,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'bower_components/bootstrap-sass/dist/js/bootstrap.js'          
+          'bower_components/bootstrap-sass/dist/js/bootstrap.js',
+          'js/debounce.js',
+          'js/blendtec-blog.js'
         ],
         dest: 'js/src/scripts.js'
       }
@@ -64,7 +68,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['js/*.js', 'Gruntfile.js'],
-        tasks: ['concat', 'uglify']
+        tasks: ['jshint', 'concat', 'uglify']
       }
     }
   });

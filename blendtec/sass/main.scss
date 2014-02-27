@@ -125,6 +125,10 @@ body {
 #main {
   padding: 0;
   padding-bottom: 20px;
+
+  @media (max-width: 992px) and (min-width: 768px){
+    width: 95%;
+  }
 }
 
 .widget {
@@ -144,10 +148,13 @@ body {
       width: 100%;
     }
   }
-
+  @media (max-width: 992px) and (min-width: 768px){
+    width: 95%;
+  }
   @media (max-width: 768px){
     width: 100%;
   }
+
 }
 
 @import "modules/sidebar";
@@ -163,12 +170,21 @@ body {
 #content {
   
   width: 100%;
-  margin: 20px 0px 0px auto !important;
+  margin: 20px 0 0 auto !important;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin: 20px auto 0 auto !important;
+  }
 }
 
 #excerpts, #main_content {
   float: left;
-  padding-left: 0px;
+  padding-left: 0;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+  }
 }
 
 #main_content {
@@ -239,7 +255,7 @@ body {
   }
 
   .postauthor {
-    background: #E7E8E9;
+    background: #f6f6f6;
     padding: 10px 10px 15px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -253,7 +269,10 @@ body {
     width: 25%;
 
     img {
-
+      @media (max-width: 996px) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -263,10 +282,19 @@ body {
     line-height: 140%;
     width: 75%;
     color: #231f20;
+
+    @media (max-width: 996px) and (min-width: 768px){
+      width: 70%;
+      float: right;
+    }
+    @media (max-width: 768px) {
+      float: right;
+      width: 65%;
+    }
   }
 
   .author_title {
-    color: #bf2e1a;
+    color: $red-font;
     font-style: italic;
     font-weight: 300;
     font-size: 27px;
@@ -294,6 +322,11 @@ body {
     @include box-shadow;
     @include border-radius(5px);
     width: 20%;
+
+    @media (max-width: 768px) {
+      width: 35%;
+      margin-bottom: 25px;
+    }
 
     &.nav-previous {
       float: left;
@@ -462,12 +495,6 @@ blockquote {
 
 /* FOOTER */
 
-.bg-footer {
-  background-image: none;
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .blentec_links {
   background: none repeat scroll 0 0 #BF2E1A;
   border-radius: 5px 5px 5px 5px;
@@ -487,7 +514,7 @@ blockquote {
   color: #808285;
 
   #reply-title {
-    color: #bf2e1a;
+    color: $red-font;
     font-style: italic;
     font-weight: 300;
     font-size: 27px;
@@ -609,6 +636,7 @@ code {
   width: 100%;
   clear: both;
 }
+
 
 
 /*wordpress generated classes*/
