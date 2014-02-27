@@ -1,6 +1,7 @@
 @import 'modules/bootstrap-interface';
 
 @import 'modules/globals';
+@import "modules/mixins-custom";
 
 $main-font-color: #6d6f72;
 $white: #fff;
@@ -272,6 +273,10 @@ ul#navlist ul a {
   .navbar-main a.brand {
     margin-left: 5px;
   }
+  .navbar-collapse.collapse {
+    height: 0px;
+    border: none;
+  }
 }
 
 .nav-collapse .nav > li > a:hover {
@@ -471,6 +476,15 @@ footer.wrap {
 
 }
 .bg-footer {
+  background-image: none;
+  width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 1200px ){
+    width: 100%;
+  }
+}
+.bg-footer {
   color: #ffffff;
   clear: both;
   .container {
@@ -478,10 +492,15 @@ footer.wrap {
 
     .footer div {
       &:first-child {
-        padding-left: 0;
+        @media (min-width: 769px) {
+          padding-left: 0;
+        }
       }
       &:last-child {
-        padding-right: 0;
+        @media (min-width: 769px) {
+          padding-right: 0;
+        }
+        
       }
     }
   }
@@ -568,7 +587,60 @@ footer.wrap {
     .footer {
       padding-top: 20px;
     }
+
   }
+}
+
+@media (max-width: 768px) {
+  .footer.row-fluid {
+    margin: 0;
+    max-width: none;
+  }
+
+  .three-column {
+    padding: 0;
+    .list-container {
+      padding: 0;    
+    }
+  }
+
+  .social-container {
+    margin-top: 10px;
+  }
+  .list-container, .social-container {        
+    margin-top: 2px;        
+    
+
+    h5 {
+      background-color: $red-font;
+      padding: 10px 0 10px 10px;
+      margin: 0;
+      color: $white;
+      font-weight: normal;
+    }
+    a.clickable {
+      color: $white;
+    }
+
+    ul {
+      padding: 0 15px;
+      margin: 5px 0 0;
+
+      li a {
+        color: $red-font;
+      }
+    }
+  }
+  .social-container {
+    padding: 0;
+    margin: 2px 0 0 0;
+    width: 100%;
+  }
+
+  .footer .mobile-closed {
+    display: none;
+  }
+
 }
 .accordion.footer-mobile {
 	margin-bottom: 0;

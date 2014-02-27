@@ -397,6 +397,11 @@ add_action( 'wp_head', 'favicon_link' );
 function blendtec_url() {
     return "http://www.blendtec.com";
 }
+add_theme_support( 'post-thumbnails' );
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'featured-image', 730, 475 ); //cropped
+	add_image_size( 'post-image', 640, 375, true ); //(cropped)
+}
 
 
 

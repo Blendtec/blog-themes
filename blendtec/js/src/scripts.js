@@ -2000,3 +2000,71 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   })
 
 }(jQuery);
+;(function($) {
+
+var $event = $.event,
+	$special,
+	resizeTimeout;
+
+$special = $event.special.debouncedresize = {
+	setup: function() {
+		$( this ).on( "resize", $special.handler );
+	},
+	teardown: function() {
+		$( this ).off( "resize", $special.handler );
+	},
+	handler: function( event, execAsap ) {
+		// Save the context
+		var context = this,
+			args = arguments,
+			dispatch = function() {
+				// set correct event type
+				event.type = "debouncedresize";
+				$event.dispatch.apply( context, args );
+			};
+
+		if ( resizeTimeout ) {
+			clearTimeout( resizeTimeout );
+		}
+
+		execAsap ?
+			dispatch() :
+			resizeTimeout = setTimeout( dispatch, $special.threshold );
+	},
+	threshold: 150
+};
+
+})(jQuery);;(function($) { "use strict";
+
+var BlendtecBlog = {
+	init: function() {
+		this.MakeMobileFooterClickable();
+	},
+	MakeMobileFooterClickable: function() {
+		var Ww = $(window).width();
+
+		if (Ww <= 768) {
+			if($('.mobile-collapse').parent().not('a')) {
+				$('.mobile-collapse').wrap('<a href="#" class="clickable"></a>');
+			}
+			$('.clickable').click(function(e){
+				e.preventDefault();
+				console.log($(this).closest('.mobile-closed'));
+				$(this).next('.mobile-closed').slideToggle('normal');
+			});
+		}else{
+			if($('.mobile-collapse').parent().is('a')) {
+				$('.mobile-collapse').unwrap('<a href="#" class="clickable"></a>');
+			}
+		}
+	}
+};
+
+$(document).ready(function(){
+	BlendtecBlog.init();
+});
+$(window).on('debouncedresize', function(){
+	BlendtecBlog.MakeMobileFooterClickable();
+});
+
+})(jQuery);

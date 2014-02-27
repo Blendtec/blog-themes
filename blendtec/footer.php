@@ -16,11 +16,11 @@
 <footer class="wrap">
 	<div class="bg-footer">
 		<div class="container">
-				<div class="row-fluid footer">
-					<div class="col-md-8 col-sm-8 col-xs-8">
-						<div class="col-md-4 col-sm-4 col-xs-4">
-							<h5>Company</h5>
-							<ul>
+				<div class="row-fluid row footer">
+					<div class="col-md-8 col-sm-8 col-xs-12 three-column">
+						<div class="col-md-4 col-sm-4 col-xs-12 list-container">
+							<h5 class="mobile-collapse">Company</h5>
+							<ul class="mobile-closed">
 								<li>
 									<a href="<?php echo blendtec_url(); ?>/company/about">About Us</a>					</li>
 								<li>
@@ -31,9 +31,9 @@
 									<a href="<?php echo blendtec_url(); ?>/dealers">Dealers</a>					</li>
 							</ul>
 						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4">
-							<h5>Customer Support</h5>
-							<ul>
+						<div class="col-md-4 col-sm-4 col-xs-12 list-container">
+							<h5 class="mobile-collapse">Customer Support</h5>
+							<ul class="mobile-closed">
 								<li>
 									<a href="<?php echo blendtec_url(); ?>/support/use_and_care">Use and Care</a>					</li>
 								<li>
@@ -44,9 +44,9 @@
 									<a href="<?php echo blendtec_url(); ?>/support/faq">FAQs</a>					</li>
 							</ul>
 						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4">
-							<h5>Resources</h5>
-							<ul>
+						<div class="col-md-4 col-sm-4 col-xs-12 list-container">
+							<h5 class="mobile-collapse">Resources</h5>
+							<ul class="mobile-closed">
 								<li>
 									<a href="<?php echo blendtec_url(); ?>/blog">Blog</a>					</li>					
 								<li>
@@ -61,9 +61,9 @@
 						</div>
 					</div>
 					
-						<div class="col-md-4 col-sm-4 col-xs-4">
-							<h5>Connect</h5>
-							<ul class="social">
+						<div class="col-md-4 col-sm-4 col-xs-12 social-container">
+							<h5 class="mobile-collapse">Connect</h5>
+							<ul class="social mobile-closed">
 								<li>
 									<a href="https://www.Pinterest.com/Blendtec" class="pinterest" title="Pinterest" target="_blank"><span>Pinterest</span></a>
 								</li>
