@@ -503,9 +503,6 @@ body {
   font-size: 27px;
   padding-bottom: 10px;
 }
-#main_content img.wp-image-* {
-  width: 100%;
-}
 
 .navigation a, #commentform a {
   color: #bf2e1a !important;
@@ -657,6 +654,7 @@ body {
 }
 .single-excerpt .post_featured_img .image_wrap img {
   width: 100%;
+  height: auto;
 }
 
 .fb-like, .twitter-share-button {
@@ -831,14 +829,12 @@ code {
   margin-left: auto;
   margin-right: auto;
 }
-#main_content .entry-content img, #main_content .comment-content img, #main_content .widget img, #main_content img.header-image, #main_content .author-avatar img, #main_content img.wp-post-image {
+#main_content .comment-content img, #main_content .widget img, #main_content img.header-image, #main_content .author-avatar img, #main_content img.wp-post-image {
   /* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
   border-radius: 3px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  width: 100%;
 }
 #main_content .entry-content img {
-  width: 85%;
   display: block;
   margin: 0 auto;
 }
