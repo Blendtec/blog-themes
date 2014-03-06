@@ -839,6 +839,11 @@ code {
   display: block;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  #main_content .entry-content img[class*='wp-image-'] {
+    width: 100%;
+  }
+}
 #main_content .wp-caption {
   max-width: 100%;
   /* Keep wide captions from overflowing their container. */
