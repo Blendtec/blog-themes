@@ -21,6 +21,10 @@ var BlendtecBlog = {
 				$('.mobile-collapse').unwrap('<a href="#" class="clickable"></a>');
 			}
 		}
+	},
+	RipOutSrcAttr: function() {
+		$('.wp-post-image').removeAttr('height');
+		$('.wp-post-image').removeAttr('width');
 	}
 };
 
@@ -29,6 +33,9 @@ $(document).ready(function(){
 });
 $(window).on('debouncedresize', function(){
 	BlendtecBlog.MakeMobileFooterClickable();
+});
+$(window).load(function(){
+	BlendtecBlog.RipOutSrcAttr();
 });
 
 })(jQuery);
