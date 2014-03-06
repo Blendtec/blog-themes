@@ -138,6 +138,7 @@ body {
 .top-banner {
   overflow: hidden;
   margin-top: 15px;
+  padding-top: 25px;
   @include box-shadow;
   @include border-bottom-radius(5px);
 
