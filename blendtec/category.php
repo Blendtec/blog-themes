@@ -27,8 +27,7 @@ get_header(); ?>
 				</header>
 
 
-           <div id="excerpts">
-           	<?php blendtec_content_nav( 'nav-above' ); ?>
+			<div id="excerpts" class="col-md-9 col-sm-9 col-xs-12">
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
