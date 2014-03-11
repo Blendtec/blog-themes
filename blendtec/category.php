@@ -1,68 +1,51 @@
-<?php
-/**
- * The template for displaying Category Archive pages.
- *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
- */
+<?php get_header(); ?>
+<div id="wrapper">
+	<div id="main" class="container">
+		<div id="content" class="row">
+		<?php if ( have_posts() ) : ?>
+		<header class="page-header">
+				<h1 class="page-title"><?php
+					printf( __( 'Category Archives: %s', 'blendtec' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+				?></h1>
 
-get_header(); ?>
+				<?php
+					$category_description = category_description();
+					if ( ! empty( $category_description ) )
+						echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
+				?>
+			</header>
+		<div id="excerpts" class="col-md-9 col-sm-9 col-xs-12">
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<section id="primary">
-			<div id="content" role="main">
-
-			<?php if ( have_posts() ) : ?>
-
-				<header class="page-header">
-					<h1 class="page-title"><?php
-						printf( __( 'Category Archives: %s', 'blendtec' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-					?></h1>
-
-					<?php
-						$category_description = category_description();
-						if ( ! empty( $category_description ) )
-							echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
-					?>
-				</header>
-
-
-			<div id="excerpts" class="col-md-9 col-sm-9 col-xs-12">
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', 'archive' );
-					?>
+				<?php
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', 'archive' );
+				?>
 
 
 
 
-				<?php endwhile; ?>
-           <?php blendtec_content_nav( 'nav-below' ); ?>
-        	</div><!-- excerpts -->
+			<?php endwhile; ?>
+			<?php blendtec_content_nav( 'nav-below' ); ?>
+		</div><!-- excerpts -->
+		<?php else : ?>
+			<article id="post-0" class="post no-results not-found">
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'Nothing Found', 'blendtec' ); ?></h1>
+				</header><!-- .entry-header -->
 
-
-			<?php else : ?>
-
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'blendtec' ); ?></h1>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'blendtec' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
-
-			<?php endif; ?>
-                 <?php get_sidebar(); ?>
-			</div><!-- #content -->
-		</section><!-- #primary -->
-
+				<div class="entry-content">
+					<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'blendtec' ); ?></p>
+					<?php get_search_form(); ?>
+				</div><!-- .entry-content -->
+			</article><!-- #post-0 -->
+		<?php endif; ?>
+		<?php get_sidebar(); ?>
+		</div>
+	</div>
+</div>
 <?php get_footer(); ?>
