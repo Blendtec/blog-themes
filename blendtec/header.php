@@ -19,7 +19,8 @@ if( isset($_POST['data']) )
 <head>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link href='<?php bloginfo('template_directory'); ?>/css/blendtec.css' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
+<link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />
 
 <?php if(is_single()) { ?>
 <?php if (have_posts()) : while (have_posts()) : the_post();  
