@@ -7,6 +7,10 @@
  * @since Blendtec 1.0
  */
 
+/* Disable WordPress Admin Bar. */
+show_admin_bar(false);
+
+
 /**
  * Sets up the content width value based on the theme's design and stylesheet.
  */
@@ -30,6 +34,9 @@ function blendtec_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'blendtec' ) );
 
+	/* Disable WordPress Admin Bar. */
+	show_admin_bar(false);
+	add_filter('show_admin_bar', '__return_false');
 	/*
 	 * This theme supports custom background color and image, and here
 	 * we also set up the default background color.
