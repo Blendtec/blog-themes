@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.0.2"
+    "bootstrap-sass": "~3.0.2",
+    "lodash": "~2.4.1"
   }
 }

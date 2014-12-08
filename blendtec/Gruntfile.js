@@ -46,6 +46,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'bower_components/bootstrap-sass/dist/js/bootstrap.js',
+          'bower_components/lodash/dist/lodash.js',
           'js/debounce.js',
           'js/blendtec-blog.js'
         ],
