@@ -1,0 +1,52 @@
+@font-face {
+	font-family: DINWeb-Bold;
+	src: url("#{$cdn}/fonts/DINWeb-Bold.eot");
+	src: url("#{$cdn}/fonts/DINWeb-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: DINWeb-Light;
+	src: url('#{$cdn}/fonts/DINWeb-Light.eot');
+	src: url('#{$cdn}/fonts/DINWeb-Light.woff') format("woff");
+}
+@font-face {
+    font-family: DINWeb;
+    src: url('#{$cdn}/fonts/DINWeb.eot');
+    src: url('#{$cdn}/fonts/DINWeb.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'proxima_nova_ltlight';
+    src: url('#{$cdn}/fonts/proxima/ProximaNova-Light-webfont.eot');
+    src: url('#{$cdn}/fonts/proxima/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Light-webfont.woff2') format('woff2'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Light-webfont.woff') format('woff'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Light-webfont.ttf') format('truetype'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Light-webfont.svg#proxima_nova_ltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('#{$cdn}/fonts/proxima/ProximaNova-Reg-webfont.eot');
+    src: url('#{$cdn}/fonts/proxima/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Reg-webfont.woff2') format('woff2'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Reg-webfont.ttf') format('truetype'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('#{$cdn}/fonts/proxima/ProximaNova-Bold-webfont.eot');
+    src: url('#{$cdn}/fonts/proxima/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Bold-webfont.woff2') format('woff2'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Bold-webfont.woff') format('woff'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Bold-webfont.ttf') format('truetype'),
+         url('#{$cdn}/fonts/proxima/ProximaNova-Bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

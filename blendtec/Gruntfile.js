@@ -61,6 +61,21 @@ module.exports = function(grunt) {
         dest: 'js/src/scripts.min.js'
       }
     },
+    webfont: {
+      icons: {
+        src: 'svg/*.svg',
+        dest: 'fonts',
+        destCss: 'sass/common',
+        options: {
+          font: 'blendtec_icon',
+          relativeFontPath: '../fonts',
+          stylesheet: 'scss',
+          htmlDemo: false,
+          hashes: false,
+          destHtml: ''
+        }
+      }
+    },
     watch: {
       sass: {
         files: ['sass/*.scss', 'sass/modules/_*.scss'],
@@ -78,6 +93,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-webfont');
 
   grunt.registerTask('dev', ['watch']);
   grunt.registerTask('js', ['jshint','concat', 'uglify']);

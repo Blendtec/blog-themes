@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20141024 at Mon Dec  8 15:08:07 2014
+ By Lindley White
+Copyright (c) 2014, Lindley White
+</metadata>
+<defs>
+<font id="blendtec_icon" horiz-adv-x="512" >
+  <font-face 
+    font-family="blendtec_icon"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 -64 512 448"
+    underline-thickness="25"
+    underline-position="-52"
+    unicode-range="U+F101-F101"
+  />
+<missing-glyph 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".notdef" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" 
+ />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" 
+d="M210 -13q0 -21 -15 -36t-37 -15t-37.5 15t-15.5 36t15.5 36t37.5 15t37 -15t15 -36zM420 38q22 0 37.5 -15t15.5 -36t-15.5 -36t-37.5 -15t-37 15t-15 36t15 36t37 15zM184 166q-26 -25 -26 -51h315v-51h-342q-26 13 -26 51q0 32 45 92l-97 190h-53v51h83l35 -51h351
+l43 -67l-92 -164h-236z" />
+  </font>
+</defs></svg>

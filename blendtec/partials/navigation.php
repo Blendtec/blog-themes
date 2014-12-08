@@ -1,62 +1,41 @@
-<div class="navbar-container">
-	<div class="navbar navbar-default navbar-main" role="navigation">
+<div class="new-menu navbar-container hide-print">
+	<div class="navbar navbar-main">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navbar-collapse">
-			     <span class="sr-only">Toggle navigation</span>
-			     <span class="icon-bar"></span>
-			     <span class="icon-bar"></span>
-			     <span class="icon-bar"></span>
-			   </button>
-			<a href="/" class="brand" title="Blendtec"><span>Blendtec</span></a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="<?php echo blendtec_url(); ?>" class="navbar-brand">
+			<?php get_template_part('partials/logo'); ?>
+			</a>
 		</div>
-		<div class="collapse navbar-collapse main-navbar-collapse">
-				<div class="nav navbar-nav navbar-right">
-					
-						<div id="navcontainer">
-							<ul id="navlist">
-								<li class="navlink navfirst">
-									<a href="<?php echo blendtec_url(); ?>/"><span>for home</span></a>
-									<ul>
-										<li class="firstsub">
-											<a href="<?php echo blendtec_url(); ?>/recipes" title="Recipes"><span>Recipes</span></a>										</li>
-										<li>
-											<a href="<?php echo blendtec_url(); ?>/blog" title="Blog"><span>Blog</span></a>										</li>
-										<li>
-											<a href="<?php echo blendtec_url(); ?>/products/category/blenders" title="Blenders"><span>Blenders</span></a>										</li>
-										<li>
-											<a href="<?php echo blendtec_url(); ?>/products/category/jars" title="Jars"><span>Jars</span></a>										</li>
-										<li>
-											<a href="<?php echo blendtec_url(); ?>/products/category/mills_and_mixers" title="Mixers &amp; Mills"><span>Mixers &amp; Mills</span></a>										</li>
-										<li class="lastsub">
-											<a href="<?php echo blendtec_url(); ?>/products/category/accessories" title="Accessories"><span>Accessories</span></a>										</li>
-									</ul>
-								</li>
-								<div class="menutab firsttab"></div>
-								<li class="navlink navmiddle">
-									<a href="<?php echo blendtec_url(); ?>/commercial/" title="for business"><span>for business</span></a>
-								</li>
-								<div class="menutab lasttab"></div>
-								<li class="navlink navlast">
-									<a href="<?php echo blendtec_url(); ?>/products/registration" title="Register Product"><span>registration</span></a>
-								</li>
-							</ul>
-						</div>
-					
-				</div>
+
+		<?php // @codingStandardsIgnoreStart ?>
+		<div class="nav-collapse collapse" id="main-navigation">
+		<?php // @codingStandardsIgnoreEnd ?>
+			<ul class="navbar-nav nav navbar-right" id="navlist">
+				<li class="navlink nav-first">
+					<a href="<?php echo blendtec_url(); ?>/shop" title="SHOP">SHOP</a>	
+				</li>
+				<div class="menutab firsttab"></div>
+				<li class="navlink nav-second">
+					<a href="<?php echo blendtec_url(); ?>/recipes" title="Recipes">Recipes</a>	
+				</li>
+				<div class="menutab middletab"></div>
+				<li class="navlink nav-third">
+					<a href="<?php echo blendtec_url(); ?>/find_a_store" title="FIND STORE">FIND STORE</a>	
+				</li>
+				<div class="menutab"></div>
+				<li class="navlink nav-fourth">
+					<a href="<?php echo blendtec_url(); ?>/myaccount/signin" title="Recipes">SIGN IN</a>					
+				</li>
+
+				<li class="navlink cart-state">					
+						<a href="<?php echo blendtec_url(); ?>/checkout"><i class="icon icon_cart"></i><span>YOUR CART</span></a>						
+				</li>
+			</ul>
 		</div>
-		
-	</div>
-</div>
-<div class="container-fluid">
-	<div class="subbar-container">
-		<ul id="sublist">
-			<li><a href="tel:18002536383">1.800.BLENDTEC</a>
-			<!--<li><a href="#">chat</a></li>
-			<li><a href="#">login</a></li>-->
-			</li><li>
-				<a href="<?php echo blendtec_url(); ?>/company/contact" title="Contact Us">contact us</a>			</li>
-			<li>
-				<a href="<?php echo blendtec_url(); ?>/checkout" title="My Cart">My Cart</a>			</li>
-		</ul>
 	</div>
 </div>

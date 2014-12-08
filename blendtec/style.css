@@ -203,7 +203,7 @@ body {
 }
 
 #sidebar {
-  background-color: white;
+  background-color: #fff;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-clip: padding-box;
@@ -284,7 +284,7 @@ body {
   width: 100%;
 }
 #sidebar .sidebartitle {
-  background-color: white;
+  background-color: #fff;
   padding: 20px 10px 10px;
   font-weight: 700;
   font-size: 17px;
@@ -386,7 +386,7 @@ body {
 }
 
 #main_content {
-  background-color: white;
+  background-color: #fff;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-clip: padding-box;
@@ -512,7 +512,7 @@ body {
 }
 #nav-below div {
   text-align: center;
-  background-color: white;
+  background-color: #fff;
   -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
   /* drop shadow */
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
@@ -548,7 +548,7 @@ body {
   border-bottom: 1px solid #e7e7e7;
   overflow: hidden;
   padding: 0 0 20px;
-  background-color: white;
+  background-color: #fff;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-clip: padding-box;
@@ -880,3 +880,5 @@ code {
   border: none;
   padding: 5px 0;
 }
+
+/*# sourceMappingURL=style.css.map */
