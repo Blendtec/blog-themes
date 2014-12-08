@@ -90,7 +90,7 @@
 						</div>
 					
 					<p class="copyright col-md-12 col-sm-12 col-xs-12">
-						&copy; 2013 Blendtec, a division <br /> of K-TEC, Inc. All Rights Reserved.
+						&copy; 2014 Blendtec, a division <br /> of K-TEC, Inc. All Rights Reserved.
 					</p>
 				</div>
 				
@@ -151,6 +151,7 @@ var google_remarketing_only = true;
 </div>
 
 </noscript>
+<script src="//cdn.optimizely.com/js/102081623.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>
