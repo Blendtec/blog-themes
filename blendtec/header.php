@@ -50,7 +50,7 @@ if( isset($_POST['data']) )
 <!--[if lt IE 9]>
 <script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 <![endif]-->
-
+<script src="//cdn.blendtec.com/js/modernizr.min.js"></script>
 </head>
 
 <body>

@@ -1,9 +1,9 @@
 @import 'modules/bootstrap-interface';
-@import 'modules/globals';
 @import "modules/mixins-custom";
 @import "modules/blendtec_variables";
-@import "common/blendtec_icon";
 @import "common/fonts";
+
+@import 'modules/globals';
 
 $main-font-color: #6d6f72;
 $white: #fff;

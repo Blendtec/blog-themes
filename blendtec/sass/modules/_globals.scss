@@ -1,4 +1,4 @@
-$main-bg-color: #dcdddf;
+$main-bg-color: #ffffff;
 $main-font-color: #6d6f72;
 $second-heading-color: #ec0928;
 $red-font: #e90129;
@@ -10,7 +10,7 @@ html, body {
 	padding-top: 0px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
-	font-family: Lato, San-Serif;
+	font-family: $proximaLight, sans-serif;
 	color: $main-font-color;
 	background-color: $main-bg-color;
 	font-weight: 300;

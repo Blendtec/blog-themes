@@ -66,19 +66,87 @@ Tags: blendtec, red, white, two-columns, fixed-width, custom-header, custom-back
 }
 
 /* '' */
+@font-face {
+  font-family: DINWeb-Bold;
+  src: url("//cdn.blendtec.com/fonts/DINWeb-Bold.eot");
+  src: url("//cdn.blendtec.com/fonts/DINWeb-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: DINWeb-Light;
+  src: url("//cdn.blendtec.com/fonts/DINWeb-Light.eot");
+  src: url("//cdn.blendtec.com/fonts/DINWeb-Light.woff") format("woff");
+}
+@font-face {
+  font-family: DINWeb;
+  src: url("//cdn.blendtec.com/fonts/DINWeb.eot");
+  src: url("//cdn.blendtec.com/fonts/DINWeb.woff") format("woff");
+}
+@font-face {
+  font-family: 'proxima_nova_ltlight';
+  src: url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Light-webfont.eot");
+  src: url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Light-webfont.eot?#iefix") format("embedded-opentype"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Light-webfont.woff2") format("woff2"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Light-webfont.woff") format("woff"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Light-webfont.ttf") format("truetype"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Light-webfont.svg#proxima_nova_ltlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Reg-webfont.eot");
+  src: url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Reg-webfont.eot?#iefix") format("embedded-opentype"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Reg-webfont.woff2") format("woff2"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Reg-webfont.woff") format("woff"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Reg-webfont.ttf") format("truetype"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Bold-webfont.eot");
+  src: url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Bold-webfont.woff2") format("woff2"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Bold-webfont.woff") format("woff"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Bold-webfont.ttf") format("truetype"), url("//cdn.blendtec.com/fonts/proxima/ProximaNova-Bold-webfont.svg#proxima_nova_rgbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "blendtec_icon";
+  src: url("../fonts/blendtec_icon.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "blendtec_icon";
+  src: url("fonts/blendtec_icon.eot");
+  src: url("fonts/blendtec_icon.eot?#iefix") format("embedded-opentype"), url("fonts/blendtec_icon.woff") format("woff"), url("fonts/blendtec_icon.ttf") format("truetype"), url("fonts/blendtec_icon.svg?#blendtec_icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  font-family: "blendtec_icon";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_cart:before {
+  content: "\f101";
+}
+
 /* Universal Style */
 input, textarea, p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "proxima_nova_ltlight", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "proxima_nova_rgregular", sans-serif;
   line-height: 120%;
 }
 
 a {
   text-decoration: none;
-  color: #e90129;
+  color: #ED1B2C;
 }
 a img {
   border: 0;
@@ -131,11 +199,9 @@ h4 {
 
 /* END UNIVERSAL STYLE */
 body {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   margin: 0px auto;
   font-size: 15px;
-  color: #6d6f72;
 }
 
 #wrapper {
@@ -170,15 +236,8 @@ body {
 }
 
 .top-banner {
-  padding-top: 25px;
-  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  border-right: 1px solid #bebebe;
-  border-left: 1px solid #bebebe;
+  padding-top: 80px;
+  border: 1px solid #bebebe;
   -webkit-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -211,14 +270,7 @@ body {
   padding: 25px 0px;
   float: right;
   position: relative;
-  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  border-right: 1px solid #bebebe;
-  border-left: 1px solid #bebebe;
+  border: 1px solid #bebebe;
   z-index: 1;
 }
 #sidebar h3 {
@@ -237,9 +289,9 @@ body {
   width: 100%;
 }
 #sidebar ul li a {
-  color: #e90129;
+  color: #ED1B2C;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 15px;
 }
 #sidebar #sidebar-banner {
   width: 80%;
@@ -307,7 +359,7 @@ body {
 }
 #sidebar .post-sidebar {
   vertical-align: middle;
-  color: #e90129;
+  color: #ED1B2C;
 }
 #sidebar .post-sidebar .post-sidebar-title {
   float: left;
@@ -412,7 +464,7 @@ body {
   color: #231f20;
   font-weight: 300;
   margin: 0;
-  font-family: Lato;
+  font-family: DINWeb-Light, sans-serif;
 }
 #main_content p {
   line-height: 22px;
@@ -426,7 +478,7 @@ body {
   text-decoration: underline;
 }
 #main_content h1 {
-  color: #e90129;
+  color: #ED1B2C;
   font-weight: 300;
   margin: 10px 0 10px -2px;
   font-size: 38px;
@@ -495,7 +547,7 @@ body {
   }
 }
 #main_content .author_title {
-  color: #e90129;
+  color: #ED1B2C;
   font-style: italic;
   font-weight: 300;
   font-size: 27px;
@@ -503,7 +555,7 @@ body {
 }
 
 .navigation a, #commentform a {
-  color: #bf2e1a !important;
+  color: #ED1B2C !important;
 }
 
 #nav-below {
@@ -513,18 +565,6 @@ body {
 #nav-below div {
   text-align: center;
   background-color: #fff;
-  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  border-right: 1px solid #bebebe;
-  border-left: 1px solid #bebebe;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
   width: 20%;
 }
 @media (max-width: 768px) {
@@ -542,10 +582,15 @@ body {
 #nav-below div a {
   padding: 10px 0;
   display: block;
+  border: 1px solid #bebebe;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
 }
 
 .single-excerpt {
-  border-bottom: 1px solid #e7e7e7;
+  border: 1px solid #bebebe;
   overflow: hidden;
   padding: 0 0 20px;
   background-color: #fff;
@@ -553,18 +598,7 @@ body {
   border-radius: 5px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
-  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-  /* drop shadow */
-  border-right: 1px solid #bebebe;
-  border-left: 1px solid #bebebe;
   padding: 25px;
-}
-.single-excerpt:last-of-type {
-  border-bottom: none;
 }
 .single-excerpt .author {
   font-weight: 400;
@@ -577,10 +611,10 @@ body {
   margin: 0 auto;
 }
 .single-excerpt .the_post h2 a {
-  color: #e90129;
+  color: #ED1B2C;
   font-size: 29px;
   line-height: 22px;
-  font-family: Lato,serif;
+  font-family: DINWeb-Light;
   font-weight: 300;
 }
 .single-excerpt .the_post h2 {
@@ -620,7 +654,7 @@ body {
 }
 .single-excerpt .the_post .readmore a {
   padding: 10px 20px;
-  color: #e90129;
+  color: #ED1B2C;
   display: inline-block;
   padding: 10px 30px 10px 20px;
   font-weight: normal;
@@ -709,7 +743,7 @@ blockquote p {
   color: #808285;
 }
 #comments_container #reply-title {
-  color: #e90129;
+  color: #ED1B2C;
   font-style: italic;
   font-weight: 300;
   font-size: 27px;
@@ -782,10 +816,10 @@ blockquote p {
   list-style-type: none;
 }
 #comments_container .commentlist .comment-author a {
-  color: #e90129;
+  color: #ED1B2C;
 }
 #comments_container .commentlist .comment-author a:hover, #comments_container .commentlist .comment-author a :active {
-  color: #b60120;
+  color: #c5101e;
 }
 #comments_container .commentlist .comment-author .avatar {
   margin-right: 5px;

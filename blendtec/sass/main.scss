@@ -11,12 +11,15 @@ Tags: blendtec, red, white, two-columns, fixed-width, custom-header, custom-back
 
 @import "modules/icon-font";
 @import "modules/mixins-custom";
+@import "modules/blendtec_variables";
+@import "common/fonts";
+@import "common/blendtec_icon";
 
 @charset "utf-8";
 
 $main-font-color: #6d6f72;
 $white: #fff;
-$red-font: #e90129;
+$red-font: $new-red;
 
 
 
@@ -24,12 +27,12 @@ $red-font: #e90129;
 /* Universal Style */
 
 input, textarea, p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $proximaLight, sans-serif;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $proximaReg, sans-serif;
   line-height: 120%;
 }
 
@@ -96,11 +99,9 @@ h4 {
 //  =============================================================================
 
 body {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   margin: 0px auto;
   font-size: 15px;
-  color: $main-font-color;
 }
 
 #wrapper {
@@ -136,8 +137,8 @@ body {
 }
 
 .top-banner {
-  padding-top: 25px;
-  @include box-shadow;
+  padding-top: 80px;
+  border: 1px solid #bebebe;
   @include border-bottom-radius(5px);
 
   > div > a {
@@ -200,7 +201,7 @@ body {
     color: #231f20;
     font-weight: 300;
     margin: 0;
-    font-family: Lato;
+    font-family: $dinLight, sans-serif;
   }
   p {
     line-height: 22px;
@@ -304,7 +305,7 @@ body {
 
 
 .navigation a, #commentform a {
-  color: #bf2e1a !important;
+  color: $new-red !important;
 }
 
 
@@ -313,10 +314,7 @@ body {
   margin-bottom: 20px;
   div {
     text-align: center;
-
-    background-color: $white;
-    @include box-shadow;
-    @include border-radius(5px);
+    background-color: $white;    
     width: 20%;
 
     @media (max-width: 768px) {
@@ -333,6 +331,8 @@ body {
     a {
       padding: 10px 0;
       display: block;
+      border: 1px solid #bebebe;
+      @include border-radius(5px);
     }
   }
 }
@@ -342,16 +342,13 @@ body {
 //  =============================================================================
 
 .single-excerpt {
-  border-bottom: 1px solid #e7e7e7;
+  border: 1px solid #bebebe;
   overflow: hidden;
   padding: 0 0 20px;
   background-color: $white;
   @include border-radius(5px);
-  @include box-shadow;
   padding: 25px;
-  &:last-of-type {
-    border-bottom: none;
-  }
+
   .author {
     font-weight: 400;
   }
@@ -366,7 +363,7 @@ body {
       color: $red-font;
       font-size: 29px;
       line-height: 22px;
-      font-family: Lato,serif;
+      font-family: $dinLight;
       font-weight: 300;
     }
     h2 {

@@ -22,6 +22,10 @@
 							<h5 class="mobile-collapse">Company</h5>
 							<ul class="mobile-closed">
 								<li>
+									<a href="<?php echo blendtec_url(); ?>/commercial" title="Commercial">Commercial</a>	</li>
+								<li>
+									<a href="<?php echo blendtec_url(); ?>/blog" title="Blog" >Blog</a>	</li>
+								<li>
 									<a href="<?php echo blendtec_url(); ?>/company/about">About Us</a>					</li>
 								<li>
 									<a href="<?php echo blendtec_url(); ?>/careers">Career Opportunities</a>					</li>
