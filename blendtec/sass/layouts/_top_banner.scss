@@ -1,0 +1,103 @@
+//  ============================================================================= 
+//  Top Banner with Headers and Image
+//  =============================================================================
+
+.header-top-banner {
+	margin-top: 85px;
+
+	@media (max-width: 959px) {
+		margin-top: 52px;
+	}
+	a:hover, a:active, a:visited {
+		text-decoration: none;
+
+	}
+	&--image {
+		width: 100%;
+	}
+	&--image-wrap {
+		background-image: url(images/Blog-Header-Image.jpg);
+		background-size: cover;
+		min-height: 290px;
+		position: relative;
+
+		@media (max-width: $screen-xs-max) {
+			min-height: 315px;
+			background-position: 35% 50%;
+			background-size: inset;
+		}
+	}
+
+	&--text-wrap {
+		@include container(1120px);
+		padding-top: 50px;
+	}
+	
+	&--main-header {
+		font-family: $dinBold;
+		@include font-size(4);
+		text-transform: uppercase;
+		color: $white;
+		text-align: center;
+		margin-bottom: 10px;
+		@include line-height(4);
+
+		@media (max-width: $screen-xs-max) {
+			@include font-size(2.5);
+			@include line-height(2.5);
+		}
+	}
+	&--secondary-header {
+		font-family: $dinLight;
+		@include font-size(2.08);
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+
+		@media (max-width: $screen-xs-max) {
+			@include font-size(1.5);
+		}
+	}
+
+	&--stripe {
+		border-top: 12px solid rgba(#EB2134, .7);
+		margin: 0;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+	&--stripe-inner {
+		height: 37px;
+		background-color: #EB2134;
+
+		@media (max-width: 768px) {
+			height: auto;
+		}
+	}
+	&--recipe-signup {
+		padding: 10px 0;
+
+		&--wrap {
+			width: span(8 of 12);
+			margin-right: auto;
+			margin-left: auto;
+			float: none;
+		}
+		&--description {
+			color: $white;
+			margin: 0 0 5px;
+			@include font-size(1.2);
+			font-family: $proximaReg;
+
+		}
+		.recipe-signup--email-input {
+			
+		}
+
+		.recipe-signup--button {
+			background-color: #6D6F72;
+		}
+
+		
+	}
+}

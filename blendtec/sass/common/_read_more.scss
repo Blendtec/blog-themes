@@ -1,0 +1,49 @@
+.bt-button-style {
+	@include border-radius(8px);
+	border: 1px solid $main-red;
+	background-color: transparent;
+	padding: 0;
+	overflow: hidden;
+	color: transparent;
+	text-align: inherit;
+
+	.bt-button-text {
+		float: left;
+		display: block;
+		background-color: $main-red;
+		padding: 2px 8px;
+		@include border-right-radius(8px);
+		color: $white;
+		font-family: $dinReg;
+		@include font-size(1.2);
+		text-transform: uppercase;
+		
+
+		span {
+			vertical-align: -3px;	
+		}
+
+	}
+	.bt-button-arrow {
+		padding: 9px 7px 6px;
+		float: left;
+		color: $mainGray;
+	}
+
+	&.red-to-gray {
+		.bt-button-arrow {
+			color: $mainGray;
+		}
+
+		&:hover {
+			border-color: $mainGray;
+			.bt-button-text {
+				background-color: $mainGray;
+				color: $white;
+			}
+			.bt-button-arrow {
+				color: $main-red;
+			}
+		}
+	}
+}

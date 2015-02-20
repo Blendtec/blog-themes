@@ -4,6 +4,7 @@ var BlendtecBlog = {
 	init: function() {
 		this.MakeMobileFooterClickable();
 		this.navStickyHandler();
+		this.RecipeSubmit();
 	},
 	MakeMobileFooterClickable: function() {
 		var Ww = $(window).width();
@@ -14,8 +15,7 @@ var BlendtecBlog = {
 			}
 			$('.clickable').click(function(e){
 				e.preventDefault();
-				console.log($(this).closest('.mobile-closed'));
-				$(this).next('.mobile-closed').slideToggle('normal');
+				$(this).next().slideToggle();
 			});
 		}else{
 			if($('.mobile-collapse').parent().is('a')) {
@@ -23,9 +23,68 @@ var BlendtecBlog = {
 			}
 		}
 	},
+	RecipeSubmit: function() {
+		function emailSignupBox() {
+			
+			
+			$('.recipe-signup--email-input input').each(function(){
+				$(this).on('click', function(e){
+					e.preventDefault();
+				});
+				$(this).on('focus', function(e) {
+					e.preventDefault();
+					$(this).prev('.control-label').addClass('hide');
+				});
+				$(this).on('focusout', function() {
+					if($(this).val !== '') {
+						$(this).prev('.control-label').removeClass('hide');	
+					}
+				});
+
+			});
+			
+
+
+			$('.recipe-signup--signup-form').on('submit', function(e) {
+				e.preventDefault();
+				var $email = $(this).find('#EmailSignupEmail').val();
+				$(this).find('#EmailSignupEmail').val('');
+
+				$('#modalRecipesNewsletter').modal('show');
+				$('#NewsletterEmail').val($email);
+			});
+		}
+
+		function submitEmail(){
+
+			$('#NewsletterSignupForm').on('submit', function(e){
+				e.preventDefault();
+				var data = $(this).serialize();
+				$.ajax({
+					type: 'POST',
+					url: 'http://www.blendtec.com/newsletters/add',
+					data: data,
+					headers: {
+						"X-Requested-With": "XMLHttpRequest"
+					},
+					success: function (data) {
+						$('#modalRecipesNewsletter').html(data);
+					},
+					fail: function (data) {
+						console.log(data);
+					}
+				});
+
+			});
+			
+		}
+
+		emailSignupBox();
+		submitEmail();
+	},
 	RipOutSrcAttr: function() {
 		$('.wp-post-image').removeAttr('height');
-		$('.wp-post-image').removeAttr('width');
+		$('.wp-post-image').removeAttr('width').css('height', 'auto');
 	},
 	navStickyHandler: function() {
 

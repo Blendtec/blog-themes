@@ -63,3 +63,16 @@
   }
 }
 
+//  ============================================================================= 
+//  Mixin for REM Fallback
+//  =============================================================================
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 14) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin line-height($sizeValue: 1.6) {
+  line-height: ($sizeValue * 14) + px;
+  line-height: $sizeValue + rem;
+}

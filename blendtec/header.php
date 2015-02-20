@@ -6,40 +6,46 @@
  * @subpackage Blendtec
  * @since Blendtec 1.0
  */
-
-if( isset($_POST['data']) )
-{
-    send_newsletter_subscription($_POST);
-}
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-<link href='<?php bloginfo('template_directory'); ?>/css/blendtec.css' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />
 
-<?php if(is_single()) { ?>
-<?php if (have_posts()) : while (have_posts()) : the_post();  
- $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); ?>
+<?php
+	if (is_single()) :
+		if (have_posts()) :
+			while (have_posts()) :
+				the_post();
+				$largeImageUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
+			?>
 
-<meta property="og:title" content="<?php the_title(); ?>" />
-<meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="<?php the_permalink(); ?>" />
-<meta property="og:image" content="<?php echo $large_image_url[0]; ?>" />
-<meta property="og:site_name" content="Blendtec Official Blog"/>
-<meta property="fb:app_id" content="50696200937743"/>
-<?php endwhile; endif; ?>
-<?php } ?>
+				<meta property="og:title" content="<?php the_title(); ?>" />
+				<meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
+				<meta property="og:type" content="article" />
+				<meta property="og:url" content="<?php the_permalink(); ?>" />
+				<meta property="og:image" content="<?php echo $largeImageUrl[0]; ?>" />
+				<meta property="og:site_name" content="Blendtec Official Blog"/>
+				<meta property="fb:app_id" content="50696200937743"/>
 
-<?php $searchquery = get_query_var('s'); ?>
-<?php if($searchquery != "") { ?>
-<link rel="canonical" href="http://www.blendtec.com/blog/"/>
-<?php } ?>
+			<?php 
+			endwhile;
+		endif;
+	endif;
+?>
+
+<?php 
+	$searchquery = get_query_var('s');
+	if ($searchquery != "") :
+	?>
+	<link rel="canonical" href="http://www.blendtec.com/blog/"/>
+	<?php
+	endif;
+?>
 
 <?php wp_head(); ?>
 <!--[if IE 7]>
@@ -67,28 +73,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-
-<?php if(is_single()) { ?>
-<!--Social Media Scripts -->
-<div id="fb-root"></div>
-<script>
-//(function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById(id)) return;
-//   js = d.createElement(s); js.id = id;
-//   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-//   fjs.parentNode.insertBefore(js, fjs);
-// }(document, 'script', 'facebook-jssdk'));
-</script>
-<!-- End Social Media Scripts -->
-<?php } ?>
-<?php get_template_part('partials/recipemodal'); ?>
-<?php get_template_part('partials/navigation'); ?>
+<?php 
+	get_template_part('partials/recipemodal');
+	get_template_part('partials/navigation');
+?>
 	<!-- <div id="graybg"></div> -->
 
-	<section class="top-banner container">
-		<div class="row">
-			<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/Blendtec_BlogBanner_SQ.png" alt="Blendtec banner" /></a>
-		</div>
+	<section class="header-top-banner top-banner container">
+		<a href="<?php echo get_bloginfo('url'); ?>">
+		<div class="header-top-banner--image-wrap">
+			<div class="row header-top-banner--text-wrap">
+				<h1 class="header-top-banner--main-header">The Blendtec Blog</h1>
+				<h2 class="header-top-banner--secondary-header">Fuel / Nurture / Create</h2>
+			</div>
+			<div class="header-top-banner--stripe">
+				<div class="header-top-banner--stripe-inner">
+					<div class="header-top-banner--recipe-signup hidden-sm hidden-md hidden-lg">
+						<div class="header-top-banner--recipe-signup--wrap">
+							<p class="header-top-banner--recipe-signup--description">
+								Get Recipes, Tips &amp; Offers!
+							</p>
+							<?php get_template_part('recipe_signup'); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		</a>
 	</section>
-	<div id="wrapper">
+	<section class="main-section">

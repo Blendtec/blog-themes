@@ -1,96 +1,26 @@
 /*
 Theme Name: Blendtec
 Theme URI: http://www.Blendtec.com
-Description: Blendtec theme
-Version: 1.0
-Author: Reymond Buenaviaje, Reah Sandberg
-Version: 1.0
-Tags: blendtec, red, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu (optional)
-
+Description: Blendtec Wordpress Theme 2015
+Version: 4.0
 */
 
+@import "susy";
+@import 'modules/bootstrap-interface';
 @import "modules/icon-font";
 @import "modules/mixins-custom";
 @import "modules/blendtec_variables";
+@import 'modules/globals';
 @import "common/fonts";
 @import "common/blendtec_icon";
+@import "common/read_more";
 
 @charset "utf-8";
 
-$main-font-color: #6d6f72;
-$white: #fff;
-$red-font: $new-red;
+//  ============================================================================= 
+//  Universal Styles
+//  =============================================================================
 
-
-
-
-/* Universal Style */
-
-input, textarea, p {
-  font-family: $proximaLight, sans-serif;
-
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $proximaReg, sans-serif;
-  line-height: 120%;
-}
-
-a {
-  text-decoration: none;
-  color: $red-font;
-  img {
-    border: 0;
-  }
-}
-
-label {
-  display: block;
-  width: 100px;
-}
-
-h4 {
-  font-weight: 300;
-  color: #434343;
-  font-size: 21px;
-  margin: 10px 0 0;
-}
-
-/* SHORTHAND STYLING */
-
-.white {
-  color: #f3f3f3;
-}
-
-.smalltext {
-  font-size: 12px;
-}
-
-.mediumtext {
-  font-size: 14px;
-}
-
-.mediumtext2 {
-  font-size: 15px;
-}
-
-.largertext {
-  font-size: 18px;
-}
-
-.bold700 {
-  font-weight: 700;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.clear-both {
-  clear: both;
-}
-
-/* END UNIVERSAL STYLE */
 
 
 
@@ -99,608 +29,200 @@ h4 {
 //  =============================================================================
 
 body {
-  font-weight: 400;
-  margin: 0px auto;
-  font-size: 15px;
+	font-weight: 400;
+	margin: 0px auto;
+	font-size: 14px;
 }
 
-#wrapper {
-  //margin: 0 auto;
-  //width: 1200px;
-  overflow: hidden;
+.main-section {
+	@include container(1120px);
+	margin-top: 25px;
+	&--post-container {
+		@include span(760px no-gutters);
+		@media (max-width: 1200px) {
+			@include span(8.5 of 12);
+			@include gutters(20px inside);
+		}
+		
+
+		@media (max-width: 768px) {
+			@include span(12 of 12 last);
+			@include gutters(25px inside);
+		}
+	}
+	&--sidebar {
+
+		@include span(315px last nest);
+		@media (max-width: 1200px) {
+			@include span(3.5 of 12 last nest);
+			@include gutters(20px inside);
+		}    
+
+		@media (max-width: 768px) {
+			@include span(12 of 12 last nest);
+			@include gutters(40px inside);
+		}
+	}  
 }
 
-#graybg {
-  height: 460px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: #E9E8E6;
-}
 
-.navbar-main {
-  margin-bottom: 10px;
-}
 
-#main {
-  padding: 0;
-  padding-bottom: 20px;
-
-  @media (max-width: 992px) and (min-width: 768px){
-    width: 95%;
-  }
-}
-
-.widget {
-  padding-top: 10px;
-}
-
-.top-banner {
-  padding-top: 80px;
-  border: 1px solid #bebebe;
-  @include border-bottom-radius(5px);
-
-  > div > a {
-    width: 100%;
-
-    img {
-      width: 100%;
-    }
-  }
-  @media (max-width: 992px) and (min-width: 768px){
-    width: 95%;
-  }
-  @media (max-width: 768px){
-    width: 100%;
-  }
-
-}
-
+@import "layouts/top_banner";
+@import "layouts/comments";
 @import "modules/sidebar";
+@import "layouts/footer";
 
+//  ============================================================================= 
+//  Main Navigation
+//  =============================================================================
 
-/* END LAYOUT and SWOOSH */
-
+@import "modules/navigation";
 
 //  ============================================================================= 
 //  CONTENT
 //  =============================================================================
 
-#content {
-  
-  width: 100%;
-  margin: 20px 0 0 auto !important;
+@import "layouts/content_archive";
+@import "layouts/single_post";
+@import "layouts/recipe_signup";
 
-  @media (max-width: 768px) {
-    width: 95%;
-    margin: 20px auto 0 auto !important;
-  }
-}
+.btblog--searchform {
+	&--input-wrap {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+	}
+	&--input {
+		@include border-radius(0);
+		width: 89%;
+		display: inline-block;
+		height: 30px;
+	}
 
-#excerpts, #main_content {
-  float: left;
-  padding-left: 0;
-
-  @media (max-width: 768px) {
-    padding-right: 0;
-  }
-}
-
-#main_content {
-  background-color: $white;
-  @include border-radius(5px);
-  width: 74%;
-  @include box-shadow;
-  @media (max-width: 768px){
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  h2 {
-    font-size: 29px;
-    color: #231f20;
-    font-weight: 300;
-    margin: 0;
-    font-family: $dinLight, sans-serif;
-  }
-  p {
-    line-height: 22px;
-    margin: 15px 0;
-  }
-  h2 + p {
-    margin: 0 0 15px;
-  }
-  p a, li > a {
-    color: #649699  !important;
-    text-decoration: underline;
-  }
-  h1 {
-    color: $red-font;
-    font-weight: 300;
-    margin: 10px 0 10px -2px;
-    font-size: 38px;
-  }
-  img {
-   
-  }
-
-  article.post {
-    width: 90%; 
-    margin: 0 auto;
-    .entry-title {
-      margin-top: 2rem;
-    }
-    #single-post-details {
-      clear: both;
-      color: #808285;
-      font-weight: 300;
-      font-size: 15px;
-
-      #post-details {
-        width: 100%;
-        height: 2rem;
-        padding: 0;
-        .author, .date, .tags-container {
-          float: left;
-          clear: right;
-          display: inline-block;
-          margin-right: 2rem;
-        }
-
-
-
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  .postauthor {
-    background: #f6f6f6;
-    padding: 10px 10px 15px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    border-radius: 5px;
-  }
-
-  .author_avatar {
-    float: left;
-    margin: 0;
-    width: 25%;
-
-    img {
-      @media (max-width: 996px) {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
-  .author_description {
-    float: left;
-    font-size: 13px;
-    line-height: 140%;
-    width: 75%;
-    color: #231f20;
-
-    @media (max-width: 996px) and (min-width: 768px){
-      width: 70%;
-      float: right;
-    }
-    @media (max-width: 768px) {
-      float: right;
-      width: 65%;
-    }
-  }
-
-  .author_title {
-    color: $red-font;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 27px;
-    padding-bottom: 10px;
-  }
-
+	&--button {
+		background-color: $main-red;
+		border: 0;
+		width: 11%;
+		@include border-right-radius(5px);
+		padding: 5px 10px 6px;
+		margin-left: -4px;
+			.icon_search {
+				color: $white;
+			}
+	}
 }
 
 
 .navigation a, #commentform a {
-  color: $new-red !important;
+	color: $main-red !important;
 }
 
 
 #nav-below {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  div {
-    text-align: center;
-    background-color: $white;    
-    width: 20%;
+	margin-top: 20px;
+	padding: 0 0 70px;
+	div {
+		text-align: center;
+		background-color: $white;    
+		width: 20%;
 
-    @media (max-width: 768px) {
-      width: 35%;
-      margin-bottom: 25px;
-    }
+		@media (max-width: 768px) {
+			margin-bottom: 25px;
+			width: 40%;
+		}
 
-    &.nav-previous {
-      float: left;
-    }
-    &.nav-next {
-      float: right;
-    }
-    a {
-      padding: 10px 0;
-      display: block;
-      border: 1px solid #bebebe;
-      @include border-radius(5px);
-    }
-  }
+		&.nav-previous {
+			float: left;
+			text-align: left;
+		}
+		&.nav-next {
+			float: right;
+			text-align: right;
+		}
+
+		a {
+			display: block;
+			font-family: $dinBold;
+			@include font-size(1.2);
+			text-transform: uppercase;
+			@include line-height(1.4);
+			position: relative;
+			display: inline-block;;
+
+			span.icon {
+				@include line-height(.9);
+				display: inline;
+				position: relative;
+				top: 2px;
+				float:left;
+			}
+			span.nav-text {
+				display: inline;
+				float: left;
+
+				&.left {
+					margin-left: 8px;
+				}
+				&.right {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
 }
 
 //  ============================================================================= 
-//  Single Excerpt of Post - Blog Front Page
+//  Wordpress generated classes
 //  =============================================================================
 
-.single-excerpt {
-  border: 1px solid #bebebe;
-  overflow: hidden;
-  padding: 0 0 20px;
-  background-color: $white;
-  @include border-radius(5px);
-  padding: 25px;
-
-  .author {
-    font-weight: 400;
-  }
-  +.single-excerpt {
-    margin-top: 15px;
-  }
-
-  .the_post {
-    width: 90%;
-    margin: 0 auto;
-    h2 a {
-      color: $red-font;
-      font-size: 29px;
-      line-height: 22px;
-      font-family: $dinLight;
-      font-weight: 300;
-    }
-    h2 {
-      margin-bottom: 10px;
-    }
-    .post-details {
-      width: 100%;
-      height: 2rem;
-      .author, .date {
-        width: 23%;
-        float: left;
-        clear: right;
-      }
-      margin-bottom: 10px;
-
-      @media (max-width: 1150px){
-        .author, .date {
-          width: 40%;
-          float: left;
-          clear: right;
-        }
-      }
-
-      @media (max-width: 979px){
-        .author, .date {
-          width: 50%;
-          float: left;
-          clear: right;
-        }
-      }
-    }
-    p:first-child {
-      clear: both;
-      float: left;
-    }
-    
-
-    .readmore {
-      float: right;
-      background: url("images/arrow.png") no-repeat scroll 95% center transparent;
-      a {
-        padding: 10px 20px;
-        color: $red-font;
-        display: inline-block;
-        padding: 10px 30px 10px 20px;
-        font-weight: normal;
-        font-style: normal;
-        &:hover {
-          background: url("images/arrow.png") no-repeat scroll 95% center;
-          @include border-radius(5px);      
-          display: inline-block;
-          text-decoration: underline;
-        }
-      }
-      img {
-        padding-left: 10px;
-      }
-    }
-  }
-
-  .post_featured_img {
-    clear: both;
-    position: relative;
-    margin: 30px 0 20px;
-    max-height: 400px;
-    overflow: hidden;
-    /* this is important */
-    .image_wrap{
-      width: 90%;
-      margin: 0 auto;
-      img {
-        width: 100%;
-        height: auto;
-      }  
-    }
-    
-  }
-} // [End of .single-excerpt]
-
-.fb-like, .twitter-share-button {
-  width: 90px !important;
-}
-
-.social-buttons {
-  margin: 5px 0 10px;
-}
-
-#triangle-right {
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 7.5px 0 7.5px 15px;
-  border-color: transparent transparent transparent #bf2d1a;
-}
-
-
-
-
-
-.bordered {
-  border-top: 7px solid #e0e0e0;
-  border-bottom: 7px solid #e0e0e0;
-  padding: 27px 0;
-}
-
-blockquote {
-  border-left: none;
-  padding: 0;
-  margin-left: 44px;
-  p {
-    font-style: italic;
-    color: #656668;
-    font-size: 17px;
-    line-height: 22px;
-  }
-}
-
-/* END CONTENT */
-
-
-
-/* END SIDEBAR */
-
-/* FOOTER */
-
-.blentec_links {
-  background: none repeat scroll 0 0 #BF2E1A;
-  border-radius: 5px 5px 5px 5px;
-  padding: 10px;
-  font-weight: 700;
-  &:hover {
-    background-color: #58a410;
-  }
-}
-
-
-/* COMMENTS */
-
-#comments_container {
-  clear: both;
-  position: relative;
-  color: #808285;
-
-  #reply-title {
-    color: $red-font;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 27px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-  }
-
-  .comment-notes {
-    margin-top: 0;
-  }
-  .comments-title {
-    margin-top: 10px;
-    padding: 0 10px;
-    font-size: 1.8em;
-  }
-
-  #commentform {
-    input {
-      background-color: #e5e5e5;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-      outline: 0;
-      border: 0px;
-      height: 40px;
-      width: 98%;
-      font-size: 15px;
-      color: #434343;
-      font-weight: 300;
-      padding: 0 0 0 15px;
-    }
-    input:focus {
-      border-color: #339933;
-    }
-    textarea {
-      background-color: #e5e5e5;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-      outline: 0;
-      border: 0px;
-      height: 200px;
-      width: 100% !important;
-      font-size: 15px;
-      padding: 10px;
-      color: #434343;
-      font-weight: 300;
-    }
-
-    .form-submit {
-      float: right;
-      input {
-        //background: url("images/add_comment_submit_bg.png") no-repeat scroll 15px center #58a410 !important;
-        color: white !important;
-        height: 30px !important;
-        padding: 5px 20px 5px 5px !important;
-        width: 150px !important;
-        cursor: pointer;
-      }
-    }
-
-    #submit {
-        @include border-radius(5px);
-        display: inline-block;
-        color: #fff !important;
-        text-decoration: none;
-        width: 150px;
-        float: right;
-        padding: 0 20px 0 0;
-        background: #58a410 url("images/white-arrow.png") no-repeat scroll 95% center;
-    }
-    
-  }
-
-  .commentlist {
-    li {
-      list-style-type: none;
-    }
-
-    .comment-author {
-      a {
-        color: $red-font;
-        &:hover, :active {
-          color: darken($red-font, 10%);
-        }
-      }
-      .avatar {
-        margin-right: 5px;
-      }
-      cite {
-        margin-right: 15px;
-      }
-    }
-  }
-
-  .comment-content {
-    .wp-smiley {
-      width: auto;
-      box-shadow: none;
-      border-radius: 0;
-    }
-  }
-}
-
-
-code {
-  white-space: normal;
-  background-color: none;
-  border: none;
-  color: #939598;
-}
-
-/* END COMMENTS */
-
-//  ============================================================================= 
-//  Footer
-//  =============================================================================
-.footer_copyright {
-  width: 100%;
-  clear: both;
-}
-
-
-
-/*wordpress generated classes*/
-
-/* Images */
-
-#main_content {
-  .alignleft {
-    float: left;
-    margin-right: 10px;
-  }
-  .alignright {
-    float: right;
-    margin-left: 10px;
-  }
-  .aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .comment-content img, .widget img, img.header-image, .author-avatar img, img.wp-post-image {
-    /* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-    border-radius: 3px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    //width: 100%;
-  }
-  .entry-content img {
-    //width: 85%;
-    display: block;
-    margin: 0 auto;
-  }
-  .entry-content img[class*='wp-image-'] {
-    @media (max-width: 767px) {
-      width: 85%;
-      height: auto;
-    }
-  }
-  .wp-caption {
-    max-width: 100%;
-    /* Keep wide captions from overflowing their container. */
-    padding: 4px;
-    .wp-caption-text {
-      font-style: italic;
-      font-size: 12px;
-      font-size: 0.857142857rem;
-      line-height: 2;
-      color: #757575;
-    }
-  }
-  .gallery-caption, .entry-caption {
-    font-style: italic;
-    font-size: 12px;
-    font-size: 0.857142857rem;
-    line-height: 2;
-    color: #757575;
-  }
-}
-
-#searchform input {
-  width: 93%;
-}
-
-#searchsubmit {
-  width: 40% !important;
-  margin-left: 60%;
-  background-color: #58a410;
-  @include border-radius(5px);
-  display: inline-block;
-  color: #fff !important;
-  text-decoration: none;
-  border: none;
-  padding: 5px 0;
+.main-section--post-container {
+	.alignleft {
+		float: left;
+		margin-right: 10px;
+	}
+	.alignright {
+		float: right;
+		margin-left: 10px;
+	}
+	.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.comment-content img, .widget img, img.header-image, .author-avatar img {
+		/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+		border-radius: 3px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		//width: 100%;
+	}
+	.entry-content img {
+		//width: 85%;
+		display: block;
+		margin: 0 auto;
+	}
+	.entry-content img[class*='wp-image-'] {
+		@media (max-width: 767px) {
+			width: 85%;
+			height: auto;
+		}
+	}
+	.wp-caption {
+		max-width: 100%;
+		/* Keep wide captions from overflowing their container. */
+		padding: 4px;
+		.wp-caption-text {
+			font-style: italic;
+			font-size: 12px;
+			font-size: 0.857142857rem;
+			line-height: 2;
+			color: #757575;
+		}
+	}
+	.gallery-caption, .entry-caption {
+		font-style: italic;
+		font-size: 12px;
+		font-size: 0.857142857rem;
+		line-height: 2;
+		color: #757575;
+	}
 }

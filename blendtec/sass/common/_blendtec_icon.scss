@@ -4,7 +4,7 @@
 
 @font-face {
 	font-family:"blendtec_icon";
-	src:url("../fonts/blendtec_icon.eot");
+	src:url("fonts/blendtec_icon.eot");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -38,6 +38,56 @@
 // Icons
 
 
-.icon_cart:before {
+.icon_arrow:before {
 	content:"\f101";
+}
+
+
+.icon_arrow_left:before {
+	content:"\f102";
+}
+
+
+.icon_cart:before {
+	content:"\f103";
+}
+
+
+.icon_circle_blog:before {
+	content:"\f104";
+}
+
+
+.icon_circle_facebook:before {
+	content:"\f105";
+}
+
+
+.icon_circle_google:before {
+	content:"\f106";
+}
+
+
+.icon_circle_instagram:before {
+	content:"\f107";
+}
+
+
+.icon_circle_pinterest:before {
+	content:"\f108";
+}
+
+
+.icon_circle_twitter:before {
+	content:"\f109";
+}
+
+
+.icon_circle_youtube:before {
+	content:"\f10a";
+}
+
+
+.icon_search:before {
+	content:"\f10b";
 }

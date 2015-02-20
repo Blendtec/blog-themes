@@ -1,0 +1,141 @@
+footer.footer {
+	width: 100%;
+	border-top: 1px solid #e6e7e9;
+}
+.footer
+
+.footer {
+	&--container {
+		@include container(1120px);
+		padding-top: 20px;
+
+		@media (max-width: $screen-xs-max) {
+			height: 257px;
+			min-height: 257px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	&--list-links {
+
+	}
+
+	&--list-container {
+		@include span(3 of 12);
+		a {
+			color: #000000;
+			text-transform: uppercase;
+			&:hover {
+				text-decoration: underline;
+
+			}
+		}
+		ul {
+			font-size: 9pt;
+			padding: 0px;
+			margin: 0px;
+			list-style: none;
+
+			li {
+				line-height: 20px;
+			}
+		}
+
+		
+	}
+
+	&--list-container, &--social-container {
+		h5 {
+			@include font-size(1.14);
+			font-weight: bold;
+			color: #000000;
+			margin: 0px 0px 5px;
+			text-transform: uppercase;
+		}
+		@media (max-width: $screen-xs-max) {
+			@include span(12 of 12);
+			margin-top: 2px;		
+
+			h5 {
+				background-color: $red-font;
+				padding: 10px 0 10px 10px;
+				margin: 0;
+				color: $white;
+				font-weight: normal;
+			}
+			a.clickable {
+				color: $white;
+			}
+
+			ul {
+				padding: 0 15px;
+				margin: 5px 0 0;
+
+				li a {
+					color: $red-font;
+				}
+			}
+			.mobile-closed {
+				display: none;
+			}
+		}
+
+		
+	}
+
+	&--social-container {
+		li {
+			display: inline-block;
+			margin-right: 3px;
+			a {
+				display: block;
+				width: 37px;
+				height: 39px;
+				overflow: hidden;
+				span {
+					display: none;
+				}
+				&.pinterest {
+					background-image: url('images/social_sprite.png');
+					background-position: -118px -1px;
+				}
+				&.facebook {
+					background-image: url('images/social_sprite.png');
+					background-position: -1px -1px;
+				}
+				&.youtube {
+					background-image: url('images/social_sprite.png');
+					background-position: -78px -1px;
+				}
+				&.twitter {
+					background-image: url('images/social_sprite.png');
+					background-position: -38px -1px;
+				}
+				&.google {
+					background-image: url('images/social_sprite.png');
+					background-position: -156px -1px;
+				}
+				&.instagram {
+					background-image: url('images/social_sprite.png');
+					background-position: -196px -1px;
+				}
+			}
+		}
+		
+	}
+
+	&--copyright {
+		@include span(12 of 12);
+		color: #000000;
+		font-size: 12px;
+		margin-bottom: 0;
+		padding-left: 0;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+
+		@media (max-width: $screen-xs-max) {
+			padding: 0 20px;
+		}
+	}
+}

@@ -11,10 +11,12 @@ module.exports = function(grunt) {
       development: {
         options: {
           style: 'expanded',
-          loadPath: ['bower_components/bootstrap-sass/lib/']
+          loadPath: [
+          'bower_components/bootstrap-sass/lib/',
+          'bower_components/susy/sass/'
+          ]
         },
         files: {
-          'css/blendtec.css' : 'sass/reduced_blendtec.scss',
           'style.css' : 'sass/main.scss'
         }     
       }       
@@ -69,9 +71,9 @@ module.exports = function(grunt) {
         destCss: 'sass/common',
         options: {
           font: 'blendtec_icon',
-          relativeFontPath: '../fonts',
+          relativeFontPath: 'fonts',
           stylesheet: 'scss',
-          htmlDemo: false,
+          htmlDemo: true,
           hashes: false,
           destHtml: ''
         }
@@ -79,7 +81,7 @@ module.exports = function(grunt) {
     },
     watch: {
       sass: {
-        files: ['sass/*.scss', 'sass/modules/_*.scss'],
+        files: ['sass/*.scss', 'sass/modules/_*.scss', 'sass/layouts/_*.scss', 'sass/common/_*.scss'],
         tasks: ['sass']
       },
       js: {

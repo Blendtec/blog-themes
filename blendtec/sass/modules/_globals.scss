@@ -17,99 +17,44 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $main-font-color;
+	color: $main-heading-color;
 	font-weight: lighter;
 	margin-top: 0px;
+	font-family: $dinBold, sans-serif;
+
+	a {
+		color: $main-heading-color;
+
+		&:hover, &:visited, &:active {
+			color: darken($main-heading-color, 10%);
+		}
+	}
 }
 
 a {
-	color: #bf2e1b;
-	text-shadow: none;
-}
-
-a:hover, a:focus {
-	color: #bf2e1b;
-}
-
-a.compare {
-	font-size: 14px;
-	text-transform: uppercase;
-	padding: 2px;
-}
-
-a span.font-arrow {
-	font-family: Arial;
-}
-
-.btn {
-	text-shadow: none;
-}
-.btn:hover {
-	color: rgba(#fff, 0.9);
-	background-color: darken($red-font, 10%);
-
-}
-
-.clearfix {
-	clear: both;
-	display: block;
-}
-
-.nowrap {
-	white-space: nowrap;
-}
-
-.error-message {
-	color: #b94a48;
-	background-color: #f2dede;
-	border-color: #eed3d7;
-}
-
-.modal-header {
-	margin-right: 5px;
-	margin-left: 5px;
-	height: 20px;
-	margin-top: 5px;
-	background-color: $red-font;
-	border-radius: 5px;
-}
-
-.modal-header button.close {
-	margin-top: -10px;
-	color: white;
-	opacity: 1;
-
-	&:hover {
-		opacity: 0.5;
+	color: $main-red;
+	
+	&:hover, &:active {
+		color: darken($main-red, 10%);
 	}
 }
 
-@media (max-width: 480px) {
-	.modal-header button.close {
-		padding: 7px;
-	}
+h1 {
+	@include font-size(3.08);
 }
-.icon-off.logout {
-	margin-top: -1px;
+h2 {
+	@include font-size(2);
 }
-
-.alert .close {
-	padding: 5px;
+h3 {
+	@include font-size(1.57);
 }
-
-.grey-wave {
-	background-image: url('//d3kqanmjpc18pw.cloudfront.net/img/backgrounds/grey-wave.png');
+h4 {
+	@include font-size(1.08);
 }
 
-@media (max-width: 767px) {
-	.bg-image.grey-wave {
-		background-image: none;
-		background-color: #e8e9ea;
-		border-radius: 4px;
-	}
+input, textarea, p {
+  font-family: $proximaLight, sans-serif;
 }
-
-
 
 label {
 	margin-bottom: 3px;

@@ -1,0 +1,111 @@
+.btblog--comments-area {
+	border-bottom: 2px solid $lightGray;
+	padding: 20px 0;
+}
+.btblog--comments-title {
+	font-family: $dinReg;
+	@include font-size(1.42);
+	color: $main-red;
+	text-transform: uppercase;
+	margin: 10px 0 20px;
+}
+.btblog--commentlist {
+	list-style: none;
+	padding-left: 0;
+	display: inline-block;
+	.children {
+		list-style: none;
+		margin-top: 10px;
+		display: inline-block;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+	> li {
+		border-bottom: 1px dotted #D4D5D5;
+		padding-bottom: 10px;
+
+		&:last-child {
+			border: none;
+		}
+	}
+}
+.btblog--comment-form, .comment-respond {
+	margin-top: 20px;
+	.comment-reply-title {
+		font-family: $dinBold;
+		@include font-size(2);
+		color: $main-red;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		@include line-height(1.8);
+		span {
+			font-family: $dinReg;
+		}
+	}
+	.comment-form {
+		margin-top: -10px;
+	}
+	.comment-notes {
+		font-family: $proximaLight;
+		font-style: italic;
+		@include font-size(1.14);
+	}
+
+	.control-label {
+		font-family: $dinLight;
+		@include font-size(1.08);
+	}
+}
+.comment-respond {
+	margin-top: 20px;
+	display: inline-block;
+}
+.comment {
+	margin-top: 10px;
+	&--avatar {
+		width: span(1 of 12);
+		float: left;
+		@include border-radius(50px);
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: auto !important;
+		}
+	}
+
+	&--author-name {
+		font-family: $proximaBold;
+		@include font-size(1.14);
+	}
+
+	&--date a {
+		color: $mainGray;
+
+		&:hover {
+			color: darken($mainGray, 0.2)
+		}
+	}
+
+	&--content {
+		width: span(11 of 12);
+		@include gutters(20px inside);
+		float: left;
+	}
+
+	&--awaiting-moderation {
+		font-family: $proximaLight;
+		font-style: italic;
+		@include font-size(1.14);
+	}
+
+	&--reply a {
+		font-family: $proximaBold;
+		color: $main-red;
+	}
+}

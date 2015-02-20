@@ -1,0 +1,47 @@
+//  ============================================================================= 
+//  Styles for the Content Archive Layout
+//  =============================================================================
+.archive--single-post-item {
+	margin-bottom: 60px;
+	&--featured-image {
+		width: 100%;
+	}
+	&--image-wrap a {
+		width: 100%;
+		display: block;
+	}
+	&--image-wrap img.wp-post-image {
+		width: 100%;
+		@include border-radius(0px);
+		box-shadow: none;
+	}
+
+	&--post-title {
+		@include font-size(2.4);
+		@include line-height(2.6);
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	&--post-meta {
+		text-transform: uppercase;
+		font-family: $proximaBold;
+		@include font-size(1);
+		margin-top: 20px;
+	}
+	&--post-date {
+		color: $main-red;
+	}
+	&--author {
+		color: $main-red;
+	}
+
+	&--post-excerpt {
+		@include font-size(1.08);
+		color: $main-font-color;
+
+		.post-excerpt {
+			margin-bottom: 20px;
+		}
+	}
+}

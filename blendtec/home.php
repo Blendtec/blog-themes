@@ -1,22 +1,27 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The Template for the Homepage
+ *
+ * @package WordPress
+ * @subpackage Blendtec
+ * @since Blendtec 1.0
+ */
 
-<div id="main">
-  <div id="content" class="row">
+get_header(); ?>
 
-        <div id="excerpts" class="span8">
-     <?php $posts = get_posts();
-            foreach($posts as $post) : setup_postdata($post);
-            ?>
-            <?php get_template_part( 'content', 'archive' ); ?>
-            <?php endforeach; ?>
-              <?php blendtec_content_nav( 'nav-below' ); ?>
-    	</div><!-- excerpts -->
+<div class="main-section--content">
+	<div class="main-section--post-container">
+	<?php 
+		while (have_posts()) :
+			the_post();
+			get_template_part( 'content', 'archive' );
+		endwhile;
+	?>
+	<?php blendtec_content_nav( 'nav-below' ); ?>
+	</div>
+	
+	<?php get_sidebar(); ?>
 
-      <?php get_sidebar(); ?>
-
-      </div>
-  </div>
-
-
-
-<?php get_footer(); ?>
+	</div>
+</div>
+<?php get_footer();

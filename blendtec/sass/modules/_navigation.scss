@@ -54,6 +54,12 @@ html.no-svg {
 				margin-top: 5px;
 			}
 		}
+
+		.nav-collapse {
+			background-color: $white;
+			margin-top: -7px;
+			position: relative;
+		}
 	}
 }
 .navbar-main {
@@ -74,7 +80,7 @@ html.no-svg {
 			}
 
 			.logo-path {
-				fill: $new-red;
+				fill: $main-red;
 			}
 
 			@media (max-width: 767px){
@@ -128,10 +134,14 @@ html.no-svg {
 
 // Styles for Mobile
 @media (max-width: 767px) {
+	.navbar-main {
+		margin-bottom: 0;
+	}
 	#navlist {
 		float: none;
 		margin-top: 15px;
 		padding: 0 15px 15px;
+		width: 100%;
 
 		.navlink {
 			width: 100%;
@@ -139,7 +149,7 @@ html.no-svg {
 		}
 
 		> li > a {
-			padding-top: 12.5px;
+			padding: 12.5px 15px 10px;
 		}
 
 		.menutab {
@@ -156,6 +166,9 @@ html.no-svg {
 
 	.nav-collapse.in {
 		border-top: 1px solid lighten($mainGray, 50%);
+	}
+	.nav-collapse {
+		width: 100%;
 	}
 }
 

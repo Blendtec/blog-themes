@@ -1,17 +1,41 @@
-<div class="single-excerpt">
-  <!-- displays thumbnail if it exists -->
-  <?php if ( has_post_thumbnail()) : ?>
-    <div class="post_featured_img">
-        <div class="image_wrap">
-          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'featured-image'); ?></a>
-        </div>
-    </div>
-  <?php endif; ?>
-  <div class="the_post">
-    <h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-    <div class="post-details">
-      <div class="author"><i class="icon-user"></i><?php the_author() ?></div><div class='date'><i class="icon-clock"></i><?php the_time("d F, Y") ?></div>
-    </div>
-    <p><?php the_excerpt();?></p>
-  </div>
-</div><!-- single-excerpt -->
+<div class="archive--single-post-item">
+
+	<?php
+	if (has_post_thumbnail()) :
+	?>
+		<div class="archive--single-post-item--featured-image">
+			<div class="archive--single-post-item--image-wrap">
+				<a href="<?php the_permalink(); ?>"
+			  		title="<?php the_title(); ?>">
+			  		<?php the_post_thumbnail( 'featured-image'); ?>
+		  		</a>
+			</div>
+		</div>
+  	<?php 
+	endif;
+	?>
+  
+	<div class="archive--single-post-item--post-content">
+		<div class="archive--single-post-item--post-meta">
+			<span class="archive--single-post-item--post-date"><?php the_time("F d, Y") ?></span>
+			BY 
+			<span class="archive--single-post-item--author"><?php the_author_link(); ?></span>
+			/ 
+			<a href="<?php comments_link(); ?>">
+				<?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+			</a>	  		
+		</div>
+		<h1 class="archive--single-post-item--post-title">
+			<a href="<?php the_permalink(); ?>" 
+		  		title="<?php the_title(); ?>">
+			<?php the_title(); ?>
+	  		</a>
+		</h1>		
+		<div class="archive--single-post-item--post-excerpt">
+	  		<?php 
+				the_excerpt();
+				get_template_part('readmore');
+			?>
+		</div>    
+	</div>
+</div>

@@ -1,0 +1,98 @@
+.single-post {
+	&--featured-image {
+		width: 100%;
+	}
+
+	&--image-wrap {
+		width: 100%;
+		display: block;
+	}
+
+	&--image-wrap img.wp-post-image {
+		width: 100%;
+		@include border-radius(0px);
+		box-shadow: none;
+	}
+
+	&--title {
+		@include font-size(2.4);
+		@include line-height(2.6);
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	&--post-meta {
+		text-transform: uppercase;
+		font-family: $proximaBold;
+		@include font-size(1);
+		margin-top: 20px;
+	}
+	&--tags {
+		margin-bottom: 20px;
+		span {
+			text-transform: uppercase;
+			font-family: $dinBold;
+		}
+		
+		@include font-size(1.08);
+
+		a {
+			text-transform: capitalize;
+			font-family: $proximaLight;
+			color: $main-red;
+		}
+	}
+	&--post-date {
+		color: $main-red;
+	}
+	&--author {
+		color: $main-red;
+	}
+
+	&--post-author {
+		padding: 20px 0;
+		border-top: 2px solid $lightGray;
+		border-bottom: 2px solid $lightGray;
+		display: inline-block;
+
+		&--avatar {
+			width: span(2 of 12);
+			float: left;
+			overflow: hidden;
+			@include border-radius(100px);
+
+			img {
+				width: 100%;
+				height: auto !important;
+			}
+		}
+
+		&--info {
+			width: span(10 of 12);
+			float: left;
+			@include gutters(20px inside);
+		}
+
+		&--name {
+			span {
+				font-style: italic;
+				font-family: $proximaReg;
+				@include font-size(1.14);
+			}
+			a {
+				font-family: $proximaBold;
+				color: $main-red;
+				text-transform: uppercase;
+				@include font-size(1.14);
+			}
+		}
+
+	}
+
+	&--content {
+		p, div {
+			@include font-size(1.08);
+			@include line-height(1.45);
+		}
+	}
+}
