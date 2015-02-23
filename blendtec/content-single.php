@@ -23,8 +23,6 @@
 		endif;
 		?>
 	<header class="single-post--header">
-		<h1 class="single-post--title"><?php the_title(); ?></h1>
-
 		<?php if ('post' == get_post_type()) : ?>
 			<div class="single-post--post-meta">
 				<span class="single-post--post-date"><?php the_time("F d, Y") ?></span>
@@ -36,7 +34,7 @@
 				</a>
 			</div>
 		<?php endif; ?>
-
+		<h1 class="single-post--title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="single-post--content">

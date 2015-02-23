@@ -11,9 +11,9 @@
   	<div class="sidebar-email-recipe-signup hidden-xs"> 	
    		<div class="sidebar-email-recipe-signup--content-wrap">
    			<h2 class="sidebar-email-recipe-signup--header">Recipes</h2>
-   			<p class="sidebar-email-recipe-signup--description">
+   			<div class="sidebar-email-recipe-signup--description">
    				Get recipes, tips &amp; offers delivered to your inbox.
-   			</p>
+   			</div>
    			<?php get_template_part('recipe_signup'); ?>
    		</div>
 	</div>

@@ -1,6 +1,11 @@
 .btblog--comments-area {
 	border-bottom: 2px solid $lightGray;
-	padding: 20px 0;
+	padding: 50px 0 20px;
+
+	&.no-comments {
+		border-bottom: none;
+		padding: 0;
+	}
 }
 .btblog--comments-title {
 	font-family: $dinReg;
@@ -33,6 +38,10 @@
 			border: none;
 		}
 	}
+}
+.btblog--comment-form {
+	margin-bottom: 50px;
+	padding-top: 30px;
 }
 .btblog--comment-form, .comment-respond {
 	margin-top: 20px;

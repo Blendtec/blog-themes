@@ -2,7 +2,13 @@
 //  Styles for the Content Archive Layout
 //  =============================================================================
 .archive--single-post-item {
-	margin-bottom: 60px;
+	margin-bottom: 35px;
+	border-bottom: 2px solid $mainGray;
+	padding: 0 0 45px;
+
+	&:last-child {
+		border: none;
+	}
 	&--featured-image {
 		width: 100%;
 	}
@@ -20,7 +26,7 @@
 		@include font-size(2.4);
 		@include line-height(2.6);
 		margin-top: 30px;
-		margin-bottom: 20px;
+		margin-bottom: 0;
 	}
 
 	&--post-meta {
@@ -40,8 +46,17 @@
 		@include font-size(1.08);
 		color: $main-font-color;
 
+		p {
+			margin-top: 5px;
+		}
+
 		.post-excerpt {
-			margin-bottom: 20px;
+			margin-bottom: 15px;
+		}
+		.btblog--cta-button {
+			margin-top: 30px;
 		}
 	}
+
+	
 }

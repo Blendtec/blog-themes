@@ -11,6 +11,7 @@
 	&--content-wrap {
 		margin: 150px 0 15px;
 		display: inline-block;
+		width: 100%;
 	}
 
 	&--header {
@@ -25,6 +26,8 @@
 		color: $white;
 		@include font-size(1);
 		font-family: $dinLight;
+		max-width: 200px;
+		margin-bottom: 15px;
 	}
 
 	form {

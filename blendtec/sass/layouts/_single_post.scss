@@ -28,7 +28,7 @@
 		margin-top: 20px;
 	}
 	&--tags {
-		margin-bottom: 20px;
+		margin: 30px 0 50px;
 		span {
 			text-transform: uppercase;
 			font-family: $dinBold;
@@ -50,7 +50,7 @@
 	}
 
 	&--post-author {
-		padding: 20px 0;
+		padding: 40px 0 40px;
 		border-top: 2px solid $lightGray;
 		border-bottom: 2px solid $lightGray;
 		display: inline-block;
@@ -74,6 +74,7 @@
 		}
 
 		&--name {
+			padding-bottom: 10px;
 			span {
 				font-style: italic;
 				font-family: $proximaReg;

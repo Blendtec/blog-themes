@@ -1,4 +1,8 @@
 .recipe-signup {
+	&--signup-wrap {
+		width: 100%;
+		max-width: 270px;
+	}
 	&--email-input {
 		display: inline;
 		position: relative;

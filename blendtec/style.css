@@ -2315,7 +2315,7 @@ body {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
+  margin-top: 65px;
 }
 .main-section:after {
   content: " ";
@@ -2477,7 +2477,11 @@ body {
 
 .btblog--comments-area {
   border-bottom: 2px solid #b3b3b3;
-  padding: 20px 0;
+  padding: 50px 0 20px;
+}
+.btblog--comments-area.no-comments {
+  border-bottom: none;
+  padding: 0;
 }
 
 .btblog--comments-title {
@@ -2510,6 +2514,11 @@ body {
 }
 .btblog--commentlist > li:last-child {
   border: none;
+}
+
+.btblog--comment-form {
+  margin-bottom: 50px;
+  padding-top: 30px;
 }
 
 .btblog--comment-form, .comment-respond {
@@ -2606,6 +2615,7 @@ body {
 .sidebar-email-recipe-signup--content-wrap {
   margin: 150px 0 15px;
   display: inline-block;
+  width: 100%;
 }
 .sidebar-email-recipe-signup--header {
   color: #fff;
@@ -2620,6 +2630,8 @@ body {
   font-size: 14px;
   font-size: 1rem;
   font-family: DINWeb-Light;
+  max-width: 200px;
+  margin-bottom: 15px;
 }
 .sidebar-email-recipe-signup form {
   margin-bottom: 15px;
@@ -2630,7 +2642,7 @@ body {
   text-transform: uppercase;
   color: #6D6F72;
   margin-bottom: 5px;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .sidebar--category-list {
   padding: 10px 0 0;
@@ -3047,7 +3059,12 @@ html.no-svg.commercial-menu .navbar-main a.navbar-brand span {
   }
 }
 .archive--single-post-item {
-  margin-bottom: 60px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #6D6F72;
+  padding: 0 0 45px;
+}
+.archive--single-post-item:last-child {
+  border: none;
 }
 .archive--single-post-item--featured-image {
   width: 100%;
@@ -3070,7 +3087,7 @@ html.no-svg.commercial-menu .navbar-main a.navbar-brand span {
   line-height: 36.4px;
   line-height: 2.6rem;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .archive--single-post-item--post-meta {
   text-transform: uppercase;
@@ -3090,8 +3107,14 @@ html.no-svg.commercial-menu .navbar-main a.navbar-brand span {
   font-size: 1.08rem;
   color: #6d6f72;
 }
+.archive--single-post-item--post-excerpt p {
+  margin-top: 5px;
+}
 .archive--single-post-item--post-excerpt .post-excerpt {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+.archive--single-post-item--post-excerpt .btblog--cta-button {
+  margin-top: 30px;
 }
 
 .single-post--featured-image {
@@ -3125,7 +3148,7 @@ html.no-svg.commercial-menu .navbar-main a.navbar-brand span {
   margin-top: 20px;
 }
 .single-post--tags {
-  margin-bottom: 20px;
+  margin: 30px 0 50px;
   font-size: 15.12px;
   font-size: 1.08rem;
 }
@@ -3145,7 +3168,7 @@ html.no-svg.commercial-menu .navbar-main a.navbar-brand span {
   color: #EB2134;
 }
 .single-post--post-author {
-  padding: 20px 0;
+  padding: 40px 0 40px;
   border-top: 2px solid #b3b3b3;
   border-bottom: 2px solid #b3b3b3;
   display: inline-block;
@@ -3169,6 +3192,9 @@ html.no-svg.commercial-menu .navbar-main a.navbar-brand span {
   padding-left: 10px;
   padding-right: 10px;
 }
+.single-post--post-author--name {
+  padding-bottom: 10px;
+}
 .single-post--post-author--name span {
   font-style: italic;
   font-family: "proxima_nova_rgregular";
@@ -3189,6 +3215,10 @@ html.no-svg.commercial-menu .navbar-main a.navbar-brand span {
   line-height: 1.45rem;
 }
 
+.recipe-signup--signup-wrap {
+  width: 100%;
+  max-width: 270px;
+}
 .recipe-signup--email-input {
   display: inline;
   position: relative;

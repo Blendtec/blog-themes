@@ -17,7 +17,13 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="btblog--comments-area">
+<div id="comments" class="btblog--comments-area
+<?php 
+if (get_comments_number() < 1) {
+	echo 'no-comments';
+}
+?>
+">
 
 	<?php // You can start editing here -- including this comment! ?>
 
