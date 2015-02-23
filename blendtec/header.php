@@ -32,7 +32,7 @@
 				<meta property="og:site_name" content="Blendtec Official Blog"/>
 				<meta property="fb:app_id" content="50696200937743"/>
 
-			<?php 
+			<?php
 			endwhile;
 		endif;
 	endif;

@@ -9,44 +9,43 @@
 				</a>
 			</div>
 			<div class="modal-body recipe-email-signup--body">
-			<p>
-			<?php
-				echo __('Signup for our email list and receive recipes, tips & an occasional marketing message.');
-			?>
-			</p>
-			<div class="newsletters form">
-				<form role="form" id="NewsletterSignupForm" method="post" accept-charset="utf-8">
-					<div class="form-group required">
-						<label for="NewsletterFirstName" class="control-label">First Name<span class="required">*</span></label>
-						<input name="data[Newsletter][first_name]" class="form-control" type="text" id="NewsletterFirstName" required="required" >
-					</div>
-					<div class="form-group required">
-						<label for="NewsletterEmail" class="control-label">Email<span class="required">*</span></label>
-						<input name="data[Newsletter][email]" class="form-control" type="email" id="NewsletterEmail" required="required">
-					</div>
-					<div class="form-group recipe-email-signup--radio-select">
-						<label for="NewsletterOwnBlender"></label>
-						<div class="radio">
-							<label for="NewsletterOwnBlendertrue">
-							<input type="radio" name="data[Newsletter][own_blender]" id="NewsletterOwnBlendertrue" value="true"> I own a Blendtec</label>
+				<p>
+				<?php
+					echo __('Signup for our email list and receive recipes, tips & an occasional marketing message.');
+				?>
+				</p>
+				<div class="newsletters form">
+					<form role="form" id="NewsletterSignupForm" method="post" accept-charset="utf-8">
+						<div class="form-group required">
+							<label for="NewsletterFirstName" class="control-label">First Name<span class="required">*</span></label>
+							<input name="data[Newsletter][first_name]" class="form-control" type="text" id="NewsletterFirstName" required="required" >
 						</div>
-						<div class="radio">
-							<label for="NewsletterOwnBlenderfalse">
-							<input type="radio" name="data[Newsletter][own_blender]" id="NewsletterOwnBlenderfalse" value="false" checked="checked"> I want a Blendtec</label>
+						<div class="form-group required">
+							<label for="NewsletterEmail" class="control-label">Email<span class="required">*</span></label>
+							<input name="data[Newsletter][email]" class="form-control" type="email" id="NewsletterEmail" required="required">
 						</div>
-					</div>
-					<div class="submit-button">
-						<button type="submit" class="btn bt-button-style" div="submit-button" onClick="_gaq.push(['_trackEvent', 'Image Button', 'Send Me Recipes', 'Modal Submit Button ']);">
-							<div class="bt-button-text"><span>Signup</span></div>
-							<span class="bt-button-arrow icon icon_arrow"></span>
-						</button>
-					</div>
-				</form>
+						<div class="form-group recipe-email-signup--radio-select">
+							<label for="NewsletterOwnBlender"></label>
+							<div class="radio">
+								<label for="NewsletterOwnBlendertrue">
+								<input type="radio" name="data[Newsletter][own_blender]" id="NewsletterOwnBlendertrue" value="true"> I own a Blendtec</label>
+							</div>
+							<div class="radio">
+								<label for="NewsletterOwnBlenderfalse">
+								<input type="radio" name="data[Newsletter][own_blender]" id="NewsletterOwnBlenderfalse" value="false" checked="checked"> I want a Blendtec</label>
+							</div>
+						</div>
+						<div class="submit-button">
+							<button type="submit" class="btn bt-button-style" div="submit-button" onClick="_gaq.push(['_trackEvent', 'Image Button', 'Send Me Recipes', 'Modal Submit Button ']);">
+								<div class="bt-button-text"><span>Signup</span></div>
+								<span class="bt-button-arrow icon icon_arrow"></span>
+							</button>
+						</div>
+					</form>
+				</div>
+
 			</div>
-
 		</div>
-		</form>
 	</div>
-	</div>
-
   </div>
+  

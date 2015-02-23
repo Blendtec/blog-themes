@@ -73,7 +73,7 @@ module.exports = function(grunt) {
           font: 'blendtec_icon',
           relativeFontPath: 'fonts',
           stylesheet: 'scss',
-          htmlDemo: true,
+          htmlDemo: false,
           hashes: false,
           destHtml: ''
         }
