@@ -2475,6 +2475,23 @@ body {
   background-color: #6D6F72;
 }
 
+.featured-posts--slide {
+  width: 350px;
+  float: left;
+  margin-right: 38px;
+}
+.featured-posts--slide--image-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.featured-posts--slide--image-wrap img {
+  width: 100%;
+  height: 200px !important;
+}
+.featured-posts--slide:nth-child(3n) {
+  margin-right: -100%;
+}
+
 .btblog--comments-area {
   border-bottom: 2px solid #b3b3b3;
   padding: 50px 0 20px;

@@ -10,6 +10,9 @@
 get_header(); ?>
 
 <div class="main-section--content">
+	<div class="main-section--featured-posts">
+		<?php get_template_part('featured_posts'); ?>
+	</div>
 	<div class="main-section--post-container">
 	<?php 
 		while (have_posts()) :

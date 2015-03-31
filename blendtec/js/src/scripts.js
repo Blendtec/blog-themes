@@ -8941,6 +8941,17 @@ var BlendtecBlog = {
 		};
 
 		return NavbarHandler.init();
+	},
+	getFeaturedPosts: function() {
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			dataType: 'text',
+			data: { action: 'get_featured_posts' },
+			success: function(data){
+				console.log(data);
+			}
+		});
 	}
 };
 
@@ -8953,5 +8964,7 @@ $(window).on('debouncedresize', function(){
 $(window).load(function(){
 	BlendtecBlog.RipOutSrcAttr();
 });
+
+window.Blendtec = BlendtecBlog;
 
 })(jQuery);

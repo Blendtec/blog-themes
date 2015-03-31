@@ -86,6 +86,41 @@ function blendtec_scripts_styles() {
 
 add_action('wp_enqueue_scripts', 'blendtec_scripts_styles');
 
+add_action('wp_head','pluginname_ajaxurl');
+function pluginname_ajaxurl() {
+?>
+
+<script type="text/javascript">
+var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+</script>
+
+<?php
+}
+
+
+/**
+ * Creates function to retrieve featured posts on via Ajax
+ * 
+ * @param string Current count
+ * @return json
+ */
+function get_featured_posts() {
+	$args = array(
+		'posts_per_page'   => 3,
+		'offset'           => 0,
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'post_type'        => 'post',
+		'post_status'      => 'publish'
+	);
+	$postsArray = new WP_Query( $args );
+	include( locate_template( 'featured_posts_ajax.php' ) );
+	wp_die();
+}
+
+add_action( 'wp_ajax_get_featured_posts', 'get_featured_posts' );
+add_action( 'wp_ajax_nopriv_get_featured_posts', 'get_featured_posts' );
+
 /**
  * Creates a nicely formatted and more specific title element text
  * for output in head of document, based on current view.
@@ -471,6 +506,7 @@ add_theme_support( 'post-thumbnails' );
 if (function_exists( 'add_image_size')) {
 	add_image_size( 'featured-image', 730, 475 ); //cropped
 	add_image_size( 'post-image', 640, 375, true ); //(cropped)
+	add_image_size('featured-thumbnail', 350, 200, true);
 }
 
 function bt_search_form( $form ) {
