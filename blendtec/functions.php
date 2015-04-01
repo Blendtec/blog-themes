@@ -107,12 +107,13 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 function get_featured_posts() {
 	$offset = intval($_POST['index']);
 	$args = array(
-		'posts_per_page'   => 3,
-		'offset'           => $offset,
-		'orderby'          => 'post_date',
-		'order'            => 'DESC',
-		'post_type'        => 'post',
-		'post_status'      => 'publish'
+		'posts_per_page' => 3,
+		'category_name' => 'featured',
+		'offset' => $offset,
+		'orderby' => 'post_date',
+		'order' => 'DESC',
+		'post_type' => 'post',
+		'post_status' => 'publish'
 	);
 	$postsArray = new WP_Query( $args );
 	include( locate_template( 'featured_posts_ajax.php' ) );

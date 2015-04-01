@@ -177,7 +177,8 @@ var BlendtecBlog = {
 		});
 
 		// select cell on button click
-		$cellButtonGroup.on( 'click', 'a', function() {
+		$cellButtonGroup.on( 'click', 'a', function(e) {
+			e.preventDefault();
 			var index = $(this).index();
 			if (append === true) {
 				getFeaturedPosts(index);	

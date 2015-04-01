@@ -8,6 +8,7 @@
  */
 	$args = array(
 		'posts_per_page' => 3,
+		'category_name' => 'featured',
 		'offset' => 0,
 		'orderby' => 'post_date',
 		'order' => 'DESC',
