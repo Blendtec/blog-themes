@@ -6,7 +6,10 @@
   		</a>
 	</div>
 	<h3 class="featured-posts--slide--title">
-		<?php the_title(); ?>
+		<a href="<?php the_permalink(); ?>"
+	  		title="<?php the_title(); ?>">
+			<?php the_title(); ?>
+		</a>
 	</h3>
 	<div class="featured-posts--slide--date">
 		<?php the_time("F d, Y") ?>

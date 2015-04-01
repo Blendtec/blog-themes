@@ -101,4 +101,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>		
 		</a>
 	</section>
-	<section class="main-section">
+	<section class="main-section <?php echo is_home() ? 'main-section--home' : ''; ?> ">

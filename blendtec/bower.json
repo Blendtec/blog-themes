@@ -18,6 +18,8 @@
   "dependencies": {
     "bootstrap-sass": "~3.0.2",
     "lodash": "~2.4.1",
-    "susy": "~2.2.2"
+    "susy": "~2.2.2",
+    "flickity": "~1.0.0",
+    "isMobile": "~0.3.6"
   }
 }

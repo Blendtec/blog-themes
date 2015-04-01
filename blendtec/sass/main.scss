@@ -36,7 +36,10 @@ body {
 
 .main-section {
 	@include container(1120px);
-	margin-top: 65px;
+	padding-top: 35px;
+	&--home {
+		padding-top: 25px;
+	}
 	&--post-container {
 		@include span(760px no-gutters);
 		@media (max-width: 1200px) {
