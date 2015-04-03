@@ -51,6 +51,12 @@ function blendtec_setup() {
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 700, 400, true );
+
+	if (function_exists( 'add_image_size')) {
+		add_image_size( 'featured-image', 730, 475 ); //cropped
+		add_image_size( 'post-image', 640, 375, true ); //(cropped)
+		add_image_size('featured-thumbnail', 350, 200, true);
+	}
 }
 
 add_action( 'after_setup_theme', 'blendtec_setup' );
@@ -503,12 +509,6 @@ add_action('wp_head', 'favicon_link');
 
 function blendtec_url() {
 	return "http://www.blendtec.com";
-}
-add_theme_support( 'post-thumbnails' );
-if (function_exists( 'add_image_size')) {
-	add_image_size( 'featured-image', 730, 475 ); //cropped
-	add_image_size( 'post-image', 640, 375, true ); //(cropped)
-	add_image_size('featured-thumbnail', 350, 200, true);
 }
 
 function bt_search_form( $form ) {
