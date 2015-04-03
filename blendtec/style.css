@@ -2526,6 +2526,11 @@ body {
 .featured-posts--slide:nth-child(3n) {
   margin-right: -100%;
 }
+@media (max-width: 700px) {
+  .featured-posts--slide:nth-child(3n) {
+    margin-right: 0;
+  }
+}
 @media (max-width: 1200px) {
   .featured-posts--slide {
     width: 32.20339%;

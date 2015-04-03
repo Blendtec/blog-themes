@@ -5,7 +5,7 @@ var BlendtecBlog = {
 		this.MakeMobileFooterClickable();
 		this.navStickyHandler();
 		this.RecipeSubmit();
-		this.isMobile();
+		this.sliderInit();
 	},
 	MakeMobileFooterClickable: function() {
 		var Ww = $(window).width();
@@ -131,20 +131,24 @@ var BlendtecBlog = {
 
 		return NavbarHandler.init();
 	},
-	isMobile: function() {
-		var options, $el;
-		if(isMobile.any && !isMobile.tablet) {
+	sliderInit: function() {
+		var options, $el, wWidth = $(document).width();
+		if(isMobile.any && !isMobile.tablet || wWidth <= 768) {
 			$el = '.featured-posts--holder';
 			options = {
-				cellSelector: '.featured-posts--slide'
+				cellSelector: '.featured-posts--slide',
+				draggable: true,
+				wrapAround: true
 			};
 			options = _.merge(this.flickityOptions(), options);
 			this.initFlickity($el, options, false);
 		} else {
 			$el = '.featured-posts--slider';
 			options = {
-				cellSelector: '.featured-posts--holder'
+				cellSelector: '.featured-posts--holder',
+				draggable: false
 			};
+			if (isMobile.tablet) { options.draggable = true; }
 			options = _.merge(this.flickityOptions(), options);
 			this.initFlickity($el, options, true);
 
@@ -154,14 +158,12 @@ var BlendtecBlog = {
 		return {
 			prevNextButtons: false,
 			pageDots: false,
-			cellAlign: 'left',
-			draggable: false
+			cellAlign: 'left'
 		};
 	},
 	initFlickity: function($el, options, append) {
-		var self = this;
+		var self = this, dragStart, swipeIndex = 1, visited = [];
 		var $gallery = $($el).flickity(options);
-		//console.log($gallery);
 		// Flickity instance
 		var flkty = $gallery.data('flickity');
 		// elements
@@ -176,42 +178,68 @@ var BlendtecBlog = {
 			.addClass('active');
 		});
 
+		function isNextOrPrevious(movement) {
+			if (movement > 0) {
+				return 'next';
+			} else {
+				return 'previous';
+			}
+		}
+
+		//Assign dragStart a value on drag
+		$gallery.on('dragStart', function(e, pointer){
+			dragStart = pointer.pageX;
+		});
+		//compare against dragStart on drag end
+		$gallery.on('dragEnd', function(e, pointer) {
+			var index = flkty.selectedIndex,
+			direction = isNextOrPrevious(dragStart - pointer.pageX);
+			if (append && swipeIndex <= 2) {
+				getFeaturedPosts(swipeIndex, true, direction);
+			} else {
+				selectSlide(index, true, direction);
+			}
+			swipeIndex++;
+		});
 		// select cell on button click
 		$cellButtonGroup.on( 'click', 'a', function(e) {
 			e.preventDefault();
 			var index = $(this).index();
-			if (append === true) {
-				getFeaturedPosts(index);	
+			if (append && index > 0) {
+				getFeaturedPosts(index);
 			} else {
-				$gallery.flickity('select', index);
+				selectSlide(index);
 			}
 						
 		});
-
-		function getFeaturedPosts(index) {
-			var visited = [];
-			if (index === 0) {
-				$gallery.flickity('select', index);
-			} else {				
-				if (index !== _.include(visited)) {
-					$.ajax({
-						type: 'POST',
-						url: ajaxurl,
-						dataType: 'text',
-						data: { action: 'get_featured_posts', index:  index * 3},
-						success: function(data){
-							//.log(data);
-							var $cellElems = $(data);
-							$gallery.flickity('append', $cellElems);
-							$gallery.flickity('select', index);
-						}
-					});
-				} else {
-					$gallery.flickity('select', index);
-				}
-				visited.push(index);
+		function getFeaturedPosts(index, drag, direction) {
+			if (!_.include(visited, index)) {				
+				$.ajax({
+					type: 'POST',
+					url: ajaxurl,
+					dataType: 'text',
+					data: { action: 'get_featured_posts', index:  index * 3},
+					success: function(data){
+						//.log(data);
+						var $cellElems = $(data);
+						$gallery.flickity('append', $cellElems);
+						selectSlide(index, drag, direction);
+					}
+				});
 			}
-			
+			visited.push(index);
+		}
+
+		function selectSlide(index, drag, direction) {
+			if (drag === true && index !== null) {
+				if (direction === 'next') {
+					$gallery.flickity('next', true);
+				} else {
+					$gallery.flickity('previous', true);
+				}				
+			} else {
+				$gallery.flickity('select', index);
+			}
 		}
 
 	}
