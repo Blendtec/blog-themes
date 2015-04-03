@@ -2521,7 +2521,6 @@ body {
 }
 .featured-posts--slide--image-wrap img {
   width: 100%;
-  height: 200px !important;
 }
 .featured-posts--slide:nth-child(3n) {
   margin-right: -100%;
