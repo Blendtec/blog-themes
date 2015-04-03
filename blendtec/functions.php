@@ -47,13 +47,6 @@ function blendtec_setup() {
 	add_theme_support('custom-background', array(
 		'default-color' => 'e6e6e6',
 	));
-
-	// This theme uses a custom image size for featured images, displayed on "standard" posts.
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 700, 400, true );
-	add_image_size( 'featured-image', 730, 475 ); //cropped
-	add_image_size( 'post-image', 640, 375, true ); //(cropped)
-	add_image_size('featured-thumbnail', 350, 200, true);
 }
 
 add_action( 'after_setup_theme', 'blendtec_setup' );
@@ -534,3 +527,10 @@ function modify_contact_methods($profile_fields) {
 	return $profile_fields;
 }
 add_filter('user_contactmethods', 'modify_contact_methods');
+
+// This theme uses a custom image size for featured images, displayed on "standard" posts.
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 700, 400, true );
+add_image_size( 'featured-image', 730, 475 ); //cropped
+add_image_size( 'post-image', 640, 375, true ); //(cropped)
+add_image_size('featured-thumbnail', 350, 200, true);
