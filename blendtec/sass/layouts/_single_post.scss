@@ -95,5 +95,9 @@
 			@include font-size(1.08);
 			@include line-height(1.45);
 		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 	}
 }

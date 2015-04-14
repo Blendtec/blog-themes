@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         options: {
           style: 'expanded',
           loadPath: [
-          'bower_components/bootstrap-sass/lib/',
+          'bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/',
           'bower_components/susy/sass/'
           ]
         },
