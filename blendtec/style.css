@@ -2185,21 +2185,29 @@ a:hover, a:active {
 h1 {
   font-size: 43.12px;
   font-size: 3.08rem;
+  line-height: 48.3px;
+  line-height: 3.45rem;
 }
 
 h2 {
   font-size: 28px;
   font-size: 2rem;
+  line-height: 30.8px;
+  line-height: 2.2rem;
 }
 
 h3 {
   font-size: 21.98px;
   font-size: 1.57rem;
+  line-height: 24.5px;
+  line-height: 1.75rem;
 }
 
 h4 {
   font-size: 15.12px;
   font-size: 1.08rem;
+  line-height: 17.22px;
+  line-height: 1.23rem;
 }
 
 input, textarea, p {

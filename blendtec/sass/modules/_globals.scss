@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	color: $main-red;
-	
+
 	&:hover, &:active {
 		color: darken($main-red, 10%);
 	}
@@ -41,15 +41,19 @@ a {
 
 h1 {
 	@include font-size(3.08);
+	@include line-height(3.45);
 }
 h2 {
 	@include font-size(2);
+	@include line-height(2.2);
 }
 h3 {
 	@include font-size(1.57);
+	@include line-height(1.75);
 }
 h4 {
 	@include font-size(1.08);
+	@include line-height(1.23);
 }
 
 input, textarea, p {
