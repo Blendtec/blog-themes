@@ -56,8 +56,8 @@
 			<div class="single-post--post-author--info">
 				<div class="single-post--post-author--name">
 						<span>Written by </span>
-						<a rel="author" href="/author/<?php echo get_the_author_meta('user_login'); ?>/">
-							<?php the_author_firstname(); ?> 
+						<a rel="author" href="/blog/author/<?php echo get_the_author_meta('user_login'); ?>/">
+							<?php the_author_firstname(); ?>
 							<?php the_author_lastname(); ?>
 						</a>
 				</div>
