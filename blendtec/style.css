@@ -2859,6 +2859,12 @@ http://flickity.metafizzy.co
 .btblog--comment-form .comment-reply-title span, .comment-respond .comment-reply-title span {
   font-family: DINWeb;
 }
+.btblog--comment-form .comment-reply-title a, .comment-respond .comment-reply-title a {
+  color: #EB2134;
+  font-family: "proxima_nova_rgregular";
+  font-size: 14px;
+  font-size: 1rem;
+}
 .btblog--comment-form .comment-form, .comment-respond .comment-form {
   margin-top: -10px;
 }

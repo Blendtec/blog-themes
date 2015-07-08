@@ -268,6 +268,11 @@ function blendtec_comment($comment, $args, $depth) {
 		endswitch; // end comment_type check
 }
 
+function blendtec_cancel_comment_reply_link_filter($formatted_link, $link, $text) {
+	$formatted_link = str_replace($link, '#respond', $formatted_link);
+	return $formatted_link;
+}
+
 function blendtec_comment_form( $args = array(), $post_id = null ) {
 	if ( null === $post_id )
 		$post_id = get_the_ID();
@@ -317,7 +322,7 @@ function blendtec_comment_form( $args = array(), $post_id = null ) {
 		'name_submit' => 'submit',
 		'title_reply' => __( 'Leave <span>Comment</span>' ),
 		'title_reply_to' => __( 'Leave a Reply to %s' ),
-		'cancel_reply_link' => __( 'Cancel <span>Reply</span>' ),
+		'cancel_reply_link' => __( 'Cancel Reply' ),
 		'label_submit' => __( 'Post Comment' ),
 		'format' => 'xhtml',
 	);
@@ -340,6 +345,8 @@ function blendtec_comment_form( $args = array(), $post_id = null ) {
 			 * @since 3.0.0
 			 */
 			do_action( 'comment_form_before' );
+
+			add_filter('cancel_comment_reply_link', 'blendtec_cancel_comment_reply_link_filter');
 			?>
 			<div id="respond" class="comment-respond">
 				<h3 id="reply-title" class="comment-reply-title"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small></h3>

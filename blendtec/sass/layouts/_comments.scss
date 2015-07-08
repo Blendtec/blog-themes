@@ -55,6 +55,11 @@
 		span {
 			font-family: $dinReg;
 		}
+		a {
+			color: $main-red;
+			font-family: $proximaReg;
+			@include font-size(1);
+		}
 	}
 	.comment-form {
 		margin-top: -10px;
