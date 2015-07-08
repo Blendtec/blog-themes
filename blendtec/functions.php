@@ -269,9 +269,10 @@ function blendtec_comment($comment, $args, $depth) {
 }
 
 function blendtec_cancel_comment_reply_link_filter($formatted_link, $link, $text) {
-	$formatted_link = str_replace($link, '#respond', $formatted_link);
+	$formatted_link = str_replace('href="', 'href="/blog', $formatted_link);
 	return $formatted_link;
 }
+add_filter('cancel_comment_reply_link', 'blendtec_cancel_comment_reply_link_filter');
 
 function blendtec_comment_form( $args = array(), $post_id = null ) {
 	if ( null === $post_id )
@@ -345,8 +346,6 @@ function blendtec_comment_form( $args = array(), $post_id = null ) {
 			 * @since 3.0.0
 			 */
 			do_action( 'comment_form_before' );
-
-			add_filter('cancel_comment_reply_link', 'blendtec_cancel_comment_reply_link_filter');
 			?>
 			<div id="respond" class="comment-respond">
 				<h3 id="reply-title" class="comment-reply-title"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small></h3>
