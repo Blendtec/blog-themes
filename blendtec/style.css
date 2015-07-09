@@ -2888,6 +2888,9 @@ http://flickity.metafizzy.co
 .comment {
   margin-top: 10px;
 }
+.comment--article {
+  overflow: auto;
+}
 .comment--avatar {
   width: 6.77966%;
   float: left;
@@ -2927,6 +2930,10 @@ http://flickity.metafizzy.co
 .comment--reply a {
   font-family: "proxima_nova_rgbold";
   color: #EB2134;
+}
+.comment .comment-respond {
+  margin-left: 6.77966%;
+  padding-left: 10px;
 }
 
 .sidebar-email-recipe-signup {

@@ -81,6 +81,9 @@
 }
 .comment {
 	margin-top: 10px;
+	&--article {
+		overflow: auto;
+	}
 	&--avatar {
 		width: span(1 of 12);
 		float: left;
@@ -121,5 +124,10 @@
 	&--reply a {
 		font-family: $proximaBold;
 		color: $main-red;
+	}
+
+	.comment-respond {
+		margin-left: span(1 of 12);
+		padding-left: 10px;
 	}
 }
