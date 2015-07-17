@@ -268,7 +268,7 @@ function blendtec_comment($comment, $args, $depth) {
 		endswitch; // end comment_type check
 }
 
-function blendtec_cancel_comment_reply_link_filter($formatted_link, $link, $text) {
+function blendtec_cancel_comment_reply_link_filter($formatted_link, $link = '', $text = '') {
 	$formatted_link = str_replace('href="', 'href="/blog', $formatted_link);
 	return $formatted_link;
 }
