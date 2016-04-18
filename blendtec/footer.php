@@ -30,6 +30,12 @@
 					<li>
 						<a href="<?php echo blendtec_url(); ?>/commercial" title="Commercial">Commercial</a>
 					</li>
+					<li>
+						<a href="<?php echo blendtec_url(); ?>/dealers" title="Become a Dealer">Become a Dealer</a>
+					</li>
+					<li>
+						<a href="<?php echo blendtec_url(); ?>/international-dealers" title="International Dealers">International Dealers</a>
+					</li>
 				</ul>
 			</div>
 			<div class="footer--list-container">
