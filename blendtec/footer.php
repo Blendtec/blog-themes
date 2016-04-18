@@ -16,49 +16,58 @@
 				<h5 class="mobile-collapse">Company</h5>
 				<ul class="mobile-closed">
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/commercial" title="Commercial">Commercial</a>	</li>
+						<a href="<?php echo blendtec_url(); ?>/company/about">About Us</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/blog" title="Blog" >Blog</a>	</li>
+						<a href="<?php echo blendtec_url(); ?>/careers">Careers</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/about">About Us</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/media">Media</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/careers">Career Opportunities</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/affiliates">Affiliates</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/affiliates">Affiliates</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/dealers">Dealers</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/commercial" title="Commercial">Commercial</a>
+					</li>
 				</ul>
 			</div>
 			<div class="footer--list-container">
 				<h5 class="mobile-collapse">Customer Support</h5>
 				<ul class="mobile-closed">
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/support/use_and_care">Use and Care</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/company/contact">1-800-BLENDTEC</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/return-policy">Return Policy</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/company/contact">Contact Us</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/contact">Contact Us</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/warranty">Warranty</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/support/faq">FAQs</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/company/return-policy">Return Policy</a>
+					</li>
+					<li>
+						<a href="<?php echo blendtec_url(); ?>/support/faq">FAQs</a>
+					</li>
 				</ul>
 			</div>
 			<div class="footer--list-container">
 				<h5 class="mobile-collapse">Resources</h5>
 				<ul class="mobile-closed">
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/blog">Blog</a>					</li>					
+						<a href="<?php echo blendtec_url(); ?>/products/registration">Register a Product</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/products/registration">Product Registration</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/support/guides">Product Guides</a>
+					</li>
 					<li>
-						<a href="<?php echo blendtec_url(); ?>/support/guides">User Guides</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/privacy-policy">Privacy Policy</a>					</li>
-					<li>
-						<a href="<?php echo blendtec_url(); ?>/company/tos">Terms &amp; Conditions</a>					</li>
+						<a href="<?php echo blendtec_url(); ?>/support/use_and_care">Use and Care</a>
+					</li>
 				</ul>
 			</div>
 		</div>
-					
+
 		<div class="footer--social-container">
 			<h5 class="mobile-collapse">Connect</h5>
 			<ul class="social mobile-closed">
@@ -82,9 +91,14 @@
 				</li>
 			</ul>
 		</div>
-					
+
 		<p class="footer--copyright">
-			&copy; 2014 Blendtec, a division <br /> of K-TEC, Inc. All Rights Reserved.
+			Copyright &copy; 2016 Blendtec Inc. All Rights Reserved.
+			<br />
+			<a href="<?php echo blendtec_url(); ?>/company/privacy-policy">Privacy Policy</a>
+			|
+			<a href="<?php echo blendtec_url(); ?>/company/tos">Terms &amp; Conditions</a>
+
 		</p>
 	</div>
 </footer>

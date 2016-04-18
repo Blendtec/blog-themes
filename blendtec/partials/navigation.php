@@ -12,28 +12,30 @@
 			</a>
 		</div>
 
-		<?php // @codingStandardsIgnoreStart ?>
 		<div class="nav-collapse collapse" id="main-navigation">
-		<?php // @codingStandardsIgnoreEnd ?>
 			<ul class="navbar-nav nav navbar-right" id="navlist">
 				<li class="navlink nav-first">
-					<a href="<?php echo blendtec_url(); ?>/shop" title="SHOP">SHOP</a>	
+					<a href="<?php echo blendtec_url(); ?>/blenders" title="SHOP">SHOP</a>
 				</li>
 				<div class="menutab firsttab"></div>
 				<li class="navlink nav-second">
-					<a href="<?php echo blendtec_url(); ?>/recipes" title="Recipes">Recipes</a>	
+					<a href="<?php echo blendtec_url(); ?>/recipes" title="Recipes">Recipes</a>
 				</li>
 				<div class="menutab middletab"></div>
 				<li class="navlink nav-third">
-					<a href="<?php echo blendtec_url(); ?>/find_a_store" title="FIND STORE">FIND STORE</a>	
+					<a href="<?php echo blendtec_url(); ?>/blog" title="BLOG">BLOG</a>
+				</li>
+				<div class="menutab middletab"></div>
+				<li class="navlink nav-third">
+					<a href="<?php echo blendtec_url(); ?>/find_a_store" title="FIND STORE">FIND STORE</a>
 				</li>
 				<div class="menutab"></div>
 				<li class="navlink nav-fourth">
-					<a href="<?php echo blendtec_url(); ?>/myaccount/signin" title="Recipes">SIGN IN</a>					
+					<a href="<?php echo blendtec_url(); ?>/myaccount/signin" title="Recipes">SIGN IN</a>
 				</li>
 
-				<li class="navlink cart-state">					
-						<a href="<?php echo blendtec_url(); ?>/checkout"><i class="icon icon_cart"></i><span>YOUR CART</span></a>						
+				<li class="navlink cart-state">
+						<a href="<?php echo blendtec_url(); ?>/checkout"><i class="icon icon_cart"></i><span>YOUR CART</span></a>
 				</li>
 			</ul>
 		</div>
